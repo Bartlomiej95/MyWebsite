@@ -7,7 +7,6 @@ function App() {
   return (
     <div className="App">
       <MainTemplate>
-        <h1>Witaj na mojej stronie</h1>
         <HomePage />
       </MainTemplate>
       
