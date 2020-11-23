@@ -1,4 +1,8 @@
-# Getting Started with Create React App
+## My Portfolio Website
+
+Currently I am working on my portfolio website where i post my projects and a few words about myself.
+
+## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
