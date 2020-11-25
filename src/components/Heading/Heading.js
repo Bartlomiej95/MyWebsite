@@ -16,3 +16,8 @@ export const SubTitle = styled.h2`
     text-align: center;
     margin-bottom: 60px;
 `;
+
+export const SubHeading = styled.h2`
+    font-size: ${({ theme }) => theme.SubHeading.mobileFontSize};
+    text-align: center;
+`;

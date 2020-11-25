@@ -9,6 +9,10 @@ export const theme = {
     Header: {
         mobileHeight: '75px',
         borderBottom: '2px',
+    },
+
+    SubHeading: {
+        mobileFontSize: '35px',
     }
     
 }
