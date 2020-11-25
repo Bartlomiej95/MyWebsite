@@ -2,6 +2,7 @@ import React from 'react';
 import Banner from '../organisms/Banner/Banner';
 import Header from '../organisms/Header/Header';
 import ProjectsSection from '../organisms/ProjectsSection/ProjectsSection';
+import TechSection from '../organisms/TechSection/TechSection';
 
 
 const HomePage = () => {
@@ -10,6 +11,7 @@ const HomePage = () => {
             <Header />
             <Banner />
             <ProjectsSection />
+            <TechSection/>
         </div>
     )
 }
