@@ -5,6 +5,7 @@ import ProjectsSection from '../organisms/ProjectsSection/ProjectsSection';
 import TechSection from '../organisms/TechSection/TechSection';
 import AboutMe from '../organisms/AboutMe/AboutMe';
 import Contact from '../organisms/Contact/Contact';
+import Footer from '../organisms/Footer/Footer';
 
 
 const HomePage = () => {
@@ -16,6 +17,7 @@ const HomePage = () => {
             <TechSection/>
             <AboutMe />
             <Contact />
+            <Footer />
         </div>
     )
 }

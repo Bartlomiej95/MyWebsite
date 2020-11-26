@@ -3,6 +3,8 @@ import menuIcon from '../../assets/menuIcon.svg';
 import { MenuHeading } from '../../components/Heading/Heading';
 
 const HeaderWrapper = styled.header`
+    position: sticky;
+    top: 0;
     height: ${({ theme }) => theme.Header.mobileHeight};
     border-bottom: ${({ theme }) => theme.Header.borderBottom} solid #EDF6F9;
     display: flex;
@@ -10,6 +12,8 @@ const HeaderWrapper = styled.header`
     flex-wrap: nowrap;
     justify-content: center;
     align-items: center;
+    background-color: white;
+    z-index: 100;
 
     img {
         margin-right: 5px;
