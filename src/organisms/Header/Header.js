@@ -1,5 +1,7 @@
-import styled from 'styled-components';
+import react, { useState } from 'react';
+import styled, { css } from 'styled-components';
 import menuIcon from '../../assets/menuIcon.svg';
+import FlyoutMenu from '../../molecules/FlyoutMenu/FlyoutMenu';
 import { MenuHeading } from '../../components/Heading/Heading';
 
 const HeaderWrapper = styled.header`
@@ -13,7 +15,7 @@ const HeaderWrapper = styled.header`
     justify-content: center;
     align-items: center;
     background-color: white;
-    z-index: 100;
+    z-index: 5;
 
     img {
         margin-right: 5px;
@@ -22,11 +24,22 @@ const HeaderWrapper = styled.header`
 
 
 const Header = () => {
+
+    const [visibilityFlyoutMenu, setVisibilityFlyoutMenu] = useState(false);
+
     return(
-        <HeaderWrapper>
-            <img src={menuIcon} alt="ikona menu"/>
-            <MenuHeading>Menu</MenuHeading>
-        </HeaderWrapper>
+        <>
+            {
+                !visibilityFlyoutMenu && (
+                    <HeaderWrapper onClick={() => setVisibilityFlyoutMenu(!visibilityFlyoutMenu)}>
+                        <img src={menuIcon} alt="ikona menu"/>
+                        <MenuHeading>Menu</MenuHeading>
+                    </HeaderWrapper>
+                )
+            }
+            
+        <FlyoutMenu handleClick={() => setVisibilityFlyoutMenu(false)} visible={visibilityFlyoutMenu}/>
+        </>
     )
 }
 

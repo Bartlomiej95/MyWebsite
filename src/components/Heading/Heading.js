@@ -2,6 +2,7 @@ import styled from 'styled-components';
 
 export const MenuHeading = styled.h2`
     font-size: 30px;
+    font-weight: 500;
 `;
 
 export const MainHeading = styled.h1`
