@@ -13,12 +13,13 @@ const Wrapper = styled.section`
 
 const DivBoxImage = styled.div`
     position: relative;
-    left: -79vw;
+    left: 0;
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
     margin-top: 50px;  
     width: 300vw;  
+    transform: translateX(calc(-80vw * ${props => props.activeScreen -1 }));
 `;
 
 const WrapperNavForProject = styled.div`
@@ -61,7 +62,7 @@ const ProjectSection = () => {
     return(
         <Wrapper>
             <SubHeading>Moje projekty</SubHeading>
-            <DivBoxImage >   
+            <DivBoxImage activeScreen={activeScreen} >   
                 {
                     screens.map((item) => (
                         <BoxImage 
@@ -77,9 +78,9 @@ const ProjectSection = () => {
                 {
                     screens.map(item => (
                         <NavForProject 
-                            id={item.id} 
                             key={item.id} 
-                            highlighted={item.id === activeScreen ? true: false}
+                            id={item.id} 
+                            highlighted={ item.id === activeScreen ? true: false }
                             onClick={() => setActiveScreen(item.id)}
                          />
                     ))

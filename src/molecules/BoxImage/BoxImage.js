@@ -11,10 +11,10 @@ const WrapperImage = styled.div`
     box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.16);
 
     ${({highlighted}) => highlighted 
-    && css`
+    && css` 
         height: 320px;
         box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.6);
-        transform: translateY(-10px + 100px);
+        transform: translateY(-10px);
     `};
 `;
 
@@ -29,7 +29,7 @@ const Image = styled.img`
 const BoxImage = ({ icon, highlighted, id }) => {
 
     return(
-        <WrapperImage highlighted={highlighted}>
+        <WrapperImage highlighted={highlighted} id={id}>
             <Image src={icon} />
         </WrapperImage>
     )
