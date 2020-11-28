@@ -1,0 +1,17 @@
+{
+    "screens": [ 
+        {
+            "id": 1,
+            "path": "/assets/screens/homepantry.PNG"
+        },
+        {
+            "id": 2,
+            "path": "/assets/screens/zdrowiena100.PNG"
+        },
+        {
+            "id": 3,
+            "path": "/assets/screens/minesweeper.PNG"
+        }
+
+    ]
+}

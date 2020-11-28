@@ -1,9 +1,7 @@
-import react from 'react';
-import styled from 'styled-components';
+import React, { useState } from 'react';
+import styled, { css } from 'styled-components';
 import BoxImage from '../../molecules/BoxImage/BoxImage';
-import homepantryScreen from '../../assets/screens/homepantry.PNG';
-import zdrowiena100Screen from '../../assets/screens/zdrowiena100.PNG';
-import minesweeperScreen from '../../assets/screens/minesweeper.PNG';
+import data from '../../data/data.json';
 import { SubHeading } from '../../components/Heading/Heading';
 import { BannerButton } from '../../components/Button/Button';
 
@@ -37,6 +35,15 @@ const NavForProject = styled.div`
     border-radius: 50%;
     border: 2px solid black;
     margin-left: 5px;
+
+    ${({ highlighted }) => highlighted 
+    && css`
+        background-color: black;
+    `}
+
+    :hover{
+        cursor: pointer;
+    }
 `;
 
 const ProjectsButton = styled(BannerButton)`
@@ -45,19 +52,38 @@ const ProjectsButton = styled(BannerButton)`
 `;
 
 const ProjectSection = () => {
+    
+    //zmienna, która wskazuje id screenu projektu, który ma byc wyróżniony
+    const [activeScreen, setActiveScreen] = useState(Math.ceil(data.screens.length/2))
+
+    const screens = data.screens.map(screen => screen);
+
     return(
         <Wrapper>
             <SubHeading>Moje projekty</SubHeading>
-            <DivBoxImage >      
-                <BoxImage icon={homepantryScreen} />
-                <BoxImage icon={zdrowiena100Screen} highlighted={true}/>
-                <BoxImage icon={minesweeperScreen} />
+            <DivBoxImage >   
+                {
+                    screens.map((item) => (
+                        <BoxImage 
+                            key={item.path} 
+                            icon={item.path} 
+                            id={item.id} 
+                            highlighted={ item.id === activeScreen ? true : false }
+                        />    
+                    ))
+                }   
             </DivBoxImage>
             <WrapperNavForProject>
-                <NavForProject />
-                <NavForProject />
-                <NavForProject />
-                <NavForProject />              
+                {
+                    screens.map(item => (
+                        <NavForProject 
+                            id={item.id} 
+                            key={item.id} 
+                            highlighted={item.id === activeScreen ? true: false}
+                            onClick={() => setActiveScreen(item.id)}
+                         />
+                    ))
+                }
             </WrapperNavForProject>
             <ProjectsButton>Zobacz wszystkie projekty</ProjectsButton>
 
