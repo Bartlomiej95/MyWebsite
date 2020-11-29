@@ -60,7 +60,7 @@ const ProjectSection = () => {
     const screens = data.screens.map(screen => screen);
 
     return(
-        <Wrapper>
+        <Wrapper id="projects">
             <SubHeading>Moje projekty</SubHeading>
             <DivBoxImage activeScreen={activeScreen} >   
                 {

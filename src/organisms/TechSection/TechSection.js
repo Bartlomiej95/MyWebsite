@@ -29,7 +29,7 @@ const TechSection = () => {
     const tech = data.technology.map(tech => tech);
 
     return(
-        <Wrapper>
+        <Wrapper id="tech">
             <SubHeading>Technologie</SubHeading>
             <WrapperTech>
                 {

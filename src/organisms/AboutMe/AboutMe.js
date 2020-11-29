@@ -54,7 +54,7 @@ const ParagraphAboutMe = styled(Paragraph)`
 
 const AboutMe = () => {
     return(
-        <Wrapper>
+        <Wrapper id="about">
             <SubHeading>O mnie</SubHeading>
             <WrapperDiv>
                 <LeftSideDiv>

@@ -37,7 +37,7 @@ const ScrollIcon = styled.img`
 
 const Banner = () => {
     return(
-        <BannerWrapper>
+        <BannerWrapper id="banner">
             <MainHeading>Bartłomiej Panfil</MainHeading>
             <SubTitle>Junior Front-End Developer</SubTitle>
 

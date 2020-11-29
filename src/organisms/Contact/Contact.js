@@ -9,7 +9,7 @@ const Wrapper = styled.section`
 
 const Contact = () => {
     return(
-        <Wrapper>
+        <Wrapper id="contact">
             <SubHeading>Kontakt</SubHeading>
         </Wrapper>
     )

@@ -26,19 +26,28 @@ const HeaderWrapper = styled.header`
 const Header = () => {
 
     const [visibilityFlyoutMenu, setVisibilityFlyoutMenu] = useState(false);
+    const [heightView, setHeightView] = useState(window.innerHeight);
+
+    const handleClick = (e) => {
+        setHeightView(window.innerHeight);
+        setVisibilityFlyoutMenu(!visibilityFlyoutMenu)
+    }
+
+    let x = window.innerHeight;
+    console.log(x);
 
     return(
         <>
             {
                 !visibilityFlyoutMenu && (
-                    <HeaderWrapper onClick={() => setVisibilityFlyoutMenu(!visibilityFlyoutMenu)}>
+                    <HeaderWrapper onClick={(e) => handleClick(e)}>
                         <img src={menuIcon} alt="ikona menu"/>
                         <MenuHeading>Menu</MenuHeading>
                     </HeaderWrapper>
                 )
             }
             
-        <FlyoutMenu handleClick={() => setVisibilityFlyoutMenu(false)} visible={visibilityFlyoutMenu}/>
+        <FlyoutMenu heightView={heightView} exitFlyoutMenu={() => setVisibilityFlyoutMenu(false)} visible={visibilityFlyoutMenu}/>
         </>
     )
 }
