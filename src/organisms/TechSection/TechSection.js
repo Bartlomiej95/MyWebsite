@@ -1,12 +1,9 @@
-import react from 'react';
+import React from 'react';
 import styled from 'styled-components';
-import htmlWord from '../../assets/tech/html.svg';
-import cssWord from '../../assets/tech/css.svg';
-import jsWord from '../../assets/tech/js.svg';
-import reactWord from '../../assets/tech/react.svg';
+import data from '../../data/data.json';
 import bcgIcon from '../../assets/bcgIconBig.svg';
+import Tech from '../../molecules/Tech/Tech';
 import { SubHeading } from '../../components/Heading/Heading';
-import { Paragraph } from '../../components/Paragraph/Paragraph';
 
 
 const Wrapper = styled.section`
@@ -16,23 +13,6 @@ const Wrapper = styled.section`
 
 const WrapperTech = styled.div`
     width: 100vw;
-`;
-
-const Tech = styled.div`
-    position: relative;
-    width: 220px;
-    height: 110px;
-    margin: 30px auto;
-    border-radius: 5px;
-    border: 1px solid #006D77;
-    
-    img {
-        display: block;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%); 
-    }
 `;
 
 const BcgIcon = styled.img`
@@ -45,23 +25,25 @@ const BcgIcon = styled.img`
 
 
 const TechSection = () => {
+
+    const tech = data.technology.map(tech => tech);
+
     return(
         <Wrapper>
             <SubHeading>Technologie</SubHeading>
-            
             <WrapperTech>
-                <Tech>
-                    <img src={htmlWord} alt="napis html" />
-                </Tech>    
-                <Tech>
-                    <img src={cssWord} alt="napis css" />
-                </Tech> 
-                <Tech>
-                    <img src={jsWord} alt="napis javascript" />
-                </Tech>  
-                <Tech>
-                    <img src={reactWord} alt="napis react" />
-                </Tech>               
+                {
+                    tech.map(tech => (
+                        <Tech
+                            key={tech.id} 
+                            id={tech.id}
+                            path={tech.path} 
+                            alt={tech.alt} 
+                            description={tech.description}
+                        />
+                        
+                    ))
+                }
             </WrapperTech>
             <BcgIcon src={bcgIcon} alt="background icon" />
             
