@@ -25,8 +25,7 @@ const WrapperImage = styled.div`
     
     ${({highlighted, boxMouseOver}) => highlighted && boxMouseOver
     && css` 
-        filter: brightness(50%);
-
+        filter: brightness(60%);
     `};  
 
 `;
