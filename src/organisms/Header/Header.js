@@ -16,6 +16,7 @@ const HeaderWrapper = styled.header`
     align-items: center;
     background-color: white;
     z-index: 5;
+    cursor: pointer;
 
     img {
         margin-right: 5px;

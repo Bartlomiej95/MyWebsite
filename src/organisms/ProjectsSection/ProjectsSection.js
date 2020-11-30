@@ -20,6 +20,7 @@ const DivBoxImage = styled.div`
     margin-top: 50px;  
     width: 300vw;  
     transform: translateX(calc(-80vw * ${props => props.activeScreen -1 }));
+    transition: transform .3s ease-in-out;
 `;
 
 const WrapperNavForProject = styled.div`
@@ -50,6 +51,7 @@ const NavForProject = styled.div`
 const ProjectsButton = styled(BannerButton)`
     width: 140px;
     font-size: 10px;
+    transition: background-color ease-in-out .3s;
 `;
 
 const ProjectSection = () => {
@@ -69,7 +71,7 @@ const ProjectSection = () => {
                             key={item.path} 
                             icon={item.path} 
                             id={item.id} 
-                            highlighted={ item.id === activeScreen ? true : false }
+                            highlighted={ item.id === activeScreen ? true : false }  
                         />    
                     ))
                 }   

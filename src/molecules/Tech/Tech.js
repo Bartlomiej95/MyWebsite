@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
-import styled, { css } from 'styled-components';
+import styled, { css, keyframes } from 'styled-components';
+import { flipInY } from "react-animations";
 import { Paragraph } from '../../components/Paragraph/Paragraph';
 
+const flipTechAnimation = keyframes`${flipInY}`;
 
 const Wrapper = styled.div`
     position: relative;
@@ -10,10 +12,12 @@ const Wrapper = styled.div`
     margin: 30px auto;
     border-radius: 10px;
     border: 1px solid #006D77;
+    
 
     ${({ mouseOver }) => mouseOver 
     && css`
         background-color: #006D77;
+        animation: .5s ${flipTechAnimation};
     `}
 
     img {
@@ -42,12 +46,12 @@ const Tech = ({ id, path, alt, description}) => {
         <>
             {
                     mouseOver ? (
-                    <Wrapper mouseOver={mouseOver} onMouseOut={() => setMouseOver(!mouseOver)}>
+                    <Wrapper mouseOver={mouseOver} onMouseLeave={() => setMouseOver(false)}>
                         <DescriptionParagraph>{description}</DescriptionParagraph>
                     </Wrapper>
                     
                     ) : (
-                    <Wrapper mouseOver={mouseOver} onMouseOver={() => setMouseOver(!mouseOver)}>
+                    <Wrapper mouseOver={mouseOver} onMouseEnter={() => setMouseOver(true)} >
                         <img src={path} alt={alt} />   
                     </Wrapper> )
             }

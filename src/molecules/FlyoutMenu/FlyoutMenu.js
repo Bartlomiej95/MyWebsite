@@ -1,7 +1,11 @@
-import styled, { css } from 'styled-components';
+import styled, { css, keyframes } from 'styled-components';
 import { Link } from 'react-scroll';
+import { fadeInDown, fadeInUp } from 'react-animations';
 import exitIcon from '../../assets/exit.svg';
 import { MenuHeading } from '../../components/Heading/Heading';
+
+const FlyoutMenuAnimation = keyframes`${fadeInDown}`;
+const ExitMenuAnimation = keyframes`${fadeInUp}`;
 
 const Wrapper = styled.div`
     position: relative;
@@ -9,13 +13,15 @@ const Wrapper = styled.div`
     width: 100vw;
     height: 100vh;
     display: none;
+    animation: .3s ${FlyoutMenuAnimation};
+   
 
     ${({ showMenu }) => showMenu 
     && css`
         top: 0;
         display: block;
         position: sticky;
-        z-index: 10;
+        z-index: 10; 
     `}
 `;
 
@@ -54,6 +60,8 @@ const ExitMenu = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: white;
+    cursor: pointer;
 
 
 `;
