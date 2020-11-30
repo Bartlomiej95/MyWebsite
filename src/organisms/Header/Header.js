@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import styled, { css } from 'styled-components';
 import { Link } from 'react-scroll';
 import menuIcon from '../../assets/menuIcon.svg';
+import githubIcon from '../../assets/github.svg';
+import linkedinIcon from '../../assets/linkedin.svg';
 import FlyoutMenu from '../../molecules/FlyoutMenu/FlyoutMenu';
 import { MenuHeading } from '../../components/Heading/Heading';
 
@@ -43,10 +45,17 @@ const HeaderWrapperDesktop = styled.header`
 
 const LeftSide = styled.div`
      @media(min-width: 1280px) {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
         height: 100%;
         line-height: ${({ theme }) => theme.Header.desktopHeight};
         width: 20vw;
-        margin: 0 auto;
+
+        img {
+            display: block;
+            transform: scale(1.5);
+        }
     }
 `;
 
@@ -75,6 +84,10 @@ const NavLink = styled(Link)`
     display: block;
     font-size: 25px;
     cursor: pointer;
+
+    :hover {
+        color: #006D77;
+    }
 `;
 
 const Header = () => {
@@ -101,7 +114,8 @@ const Header = () => {
                         </HeaderWrapper>
                         <HeaderWrapperDesktop>
                             <LeftSide>
-                                <h2>Bartłomiej Panfil</h2>
+                               <a href="https://github.com/Bartlomiej95"> <img src={githubIcon} /></a>
+                               <a href="https://www.linkedin.com/in/bart%C5%82omiej-panfil-8a6a8b196/"> <img src={linkedinIcon} /></a>
                             </LeftSide>
                             <Navigation>
                                 <WrapperUl>
