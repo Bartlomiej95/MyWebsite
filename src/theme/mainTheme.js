@@ -8,6 +8,7 @@ export const theme = {
 
     Header: {
         mobileHeight: '75px',
+        desktopHeight: '120px',
         borderBottom: '2px',
     },
 
