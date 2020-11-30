@@ -4,6 +4,8 @@ export const theme = {
         bcgHoover: '#004248',
         mobileWidth: '150px',
         mobileHeight: '40px',
+        desktopWidth: '200px',
+        desktopHeight: '50px',
     },
 
     Header: {
@@ -14,6 +16,11 @@ export const theme = {
 
     SubHeading: {
         mobileFontSize: '35px',
+    },
+
+    MainHeading: {
+        mobileFontSize: '45px',
+        desktopFontSize: '50px',
     }
     
 }

@@ -17,6 +17,12 @@ const SmallBcgIcon = styled.img`
     top: 10%;
     right: 10%;
     z-index: -1;
+
+    @media(min-width: 1280px){
+        top: 10%;
+        right: 15%;
+        transform: scale(1.5);
+    }
 `;
 
 const BigBcgIcon = styled.img`
@@ -26,6 +32,11 @@ const BigBcgIcon = styled.img`
     right: 5vw;
     transform: translateY(30%);
     z-index: -1;
+
+    @media(min-width: 1280px){
+        bottom: 10%;
+        right: 20%;
+    }
 `;
 
 const ScrollIcon = styled.img`
@@ -33,6 +44,10 @@ const ScrollIcon = styled.img`
     position: absolute;
     bottom: 5%;
     left: 20%;
+
+    @media(min-width: 1280px){
+        display: none;
+    }
 `;
 
 const Banner = () => {

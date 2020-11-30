@@ -6,10 +6,17 @@ export const MenuHeading = styled.h2`
 `;
 
 export const MainHeading = styled.h1`
-    font-size: 45px;
+    font-size: ${({ theme }) => theme.MainHeading.mobileFontSize};
     text-align: center;
     padding-top: 180px;
     margin-bottom: 30px;
+
+    @media(min-width: 1280px) {
+        font-size: ${({ theme }) => theme.MainHeading.desktopFontSize};
+        font-weight: 600;
+        letter-spacing: 6px;
+        padding-top: 120px;
+    }
 `;
 
 export const SubTitle = styled.h2`
