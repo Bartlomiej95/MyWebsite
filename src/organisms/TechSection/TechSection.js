@@ -9,10 +9,26 @@ import { SubHeading } from '../../components/Heading/Heading';
 const Wrapper = styled.section`
     position: relative;
     height: 100vh;
+    max-width: 100%;
+
+    @media(min-width: 1280px) {
+        padding: 0 100px;
+    }
 `;
 
 const WrapperTech = styled.div`
-    width: 100vw;
+    width: 100%;
+
+    @media(min-width: 1280px){
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        width: 80vw;
+        margin: 0 auto;
+        padding-top: 50px;
+
+    }
+
 `;
 
 const BcgIcon = styled.img`
@@ -21,6 +37,12 @@ const BcgIcon = styled.img`
     top: -5vh;
     left: 55vw;
     transform: scale(0.2);
+
+    @media(min-width: 1280px) {
+        transform: scale(1);
+        top: 60%;
+        left: 60%;
+    }
 `;
 
 

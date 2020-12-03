@@ -15,7 +15,7 @@ const Wrapper = styled.div`
     animation: .3s ${FlyoutMenuAnimation};
 
     @media(min-width: 1280px){
-        display:none;
+        display: none;
     }
    
 
@@ -49,6 +49,12 @@ const NavLink = styled(Link)`
     font-size: 20px;
     list-style: none;
     padding-bottom: 15px;
+
+    :hover{
+        color:#006D77;
+        cursor: pointer;
+        
+    }
 `;
 
 const WordMenu = styled(MenuHeading)`

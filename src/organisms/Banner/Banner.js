@@ -9,6 +9,10 @@ import { BannerButton } from '../../components/Button/Button';
 const BannerWrapper = styled.section`
     position: relative;
     height: calc(100vh - 77px);
+
+    @media(min-width: 1280px){
+        padding: 0 142px;
+    }
 `;
 
 const SmallBcgIcon = styled.img`

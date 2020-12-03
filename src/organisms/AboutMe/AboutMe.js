@@ -6,8 +6,13 @@ import { SubHeading } from '../../components/Heading/Heading';
 import { Paragraph } from '../../components/Paragraph/Paragraph';
 
 const Wrapper = styled.section`
-    position:relative;
-    height: 60vh;
+    position: relative;
+    height: 300px;
+
+    @media(min-width: 1280px){
+        padding: 0 100px;
+        height: 500px;
+    }
 `;
 
 const IconBcg = styled.img`
@@ -16,21 +21,35 @@ const IconBcg = styled.img`
     top: 12%;
     left: 15%;
     z-index: -1;
+
+    @media(min-width: 1280px){
+        display: none;
+    }
 `;
 
 const WrapperDiv = styled.div`
-    margin-top: 50px;
-    width: 100vw;
+    margin-top: 40px;
+    padding-top: 10px;
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
     justify-content: space-around;
     background-color: #FFDDD2;
+    height: 100%;
+
+    @media(min-width: 1280px) {
+        padding: 0 90px;
+    }
 `;
 
 const LeftSideDiv = styled.div`
     width: 45vw;
     padding-top: 20px;
+
+    @media(min-width: 1280px){
+        padding-top: 80px;
+        
+    }
 `;
 
 const RightSideDiv = styled.div`
@@ -50,6 +69,11 @@ const RightSideDiv = styled.div`
 
 const ParagraphAboutMe = styled(Paragraph)`
     margin: 30px 10px 30px 10px;
+
+    @media(min-width: 1280px) {
+        font-size: 20px;
+        margin-top: 40px;
+    }
 `;
 
 const AboutMe = () => {

@@ -3,8 +3,7 @@ import { SubHeading } from '../../components/Heading/Heading';
 
 const Wrapper = styled.section`
     height: 50vh;
-    width: 100vw;
-    margin-top: 60px;
+    margin-top: 100px;
 `;
 
 const Contact = () => {

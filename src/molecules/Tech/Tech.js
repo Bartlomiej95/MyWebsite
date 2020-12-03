@@ -12,6 +12,12 @@ const Wrapper = styled.div`
     margin: 30px auto;
     border-radius: 10px;
     border: 1px solid #006D77;
+
+    @media(min-width: 1280px){
+        width: 300px;
+        height: 150px;
+        margin: 20px 20px 20px 0;
+    }
     
 
     ${({ mouseOver }) => mouseOver 
@@ -26,11 +32,20 @@ const Wrapper = styled.div`
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%); 
+
+        @media(min-width: 1280px){
+        transform: scale(1.6) translate(-30%, -30%);
+        top: 50%;
+        left: 50%;
+    }
     }
 
 `;
 
 const DescriptionParagraph = styled(Paragraph)`
+    display: block;
+    width: 100%;
+    height: 100%;
     color: white;
     padding: 5px 10px;
     font-size: 14px;

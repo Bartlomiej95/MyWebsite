@@ -6,28 +6,43 @@ const WrapperImage = styled.div`
     position: relative;
     min-width: 273px;
     width: 80vw;
-    max-width: 513px;
     height: 300px;
     background-color: #E29578;
     border-radius: 2px;
     margin: 0 12px;
     box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.16);
     transition: filter .2s ease-in-out;
+    overflow: hidden;
 
-    ${({highlighted}) => highlighted 
-    && css` 
-        height: 320px;
-        box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.6);
-        transform: translateY(-10px);
+    @media(min-width: 500px) and (max-width: 1279px){
+        width: 400px;
+    }
 
-    `};
-
+    @media(min-width:1280px) {
+        max-width: 40vw;
+        
+    }
     
-    ${({highlighted, boxMouseOver}) => highlighted && boxMouseOver
-    && css` 
-        filter: brightness(60%);
-    `};  
+    @media(max-width: 1279px) {
+        ${({highlighted}) => highlighted 
+        && css` 
+            height: 320px;
+            box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.6);
+            transform: translateY(-10px);
+                
+        `};
 
+        ${({highlighted, boxMouseOver}) => highlighted && boxMouseOver
+        && css` 
+            filter: brightness(60%);
+        `};  
+        }
+    }
+
+    ${({ boxMouseOver }) => boxMouseOver
+        && css` 
+            filter: brightness(60%);
+        `};  
 `;
 
 const Image = styled.img`

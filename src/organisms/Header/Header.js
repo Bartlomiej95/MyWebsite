@@ -32,6 +32,8 @@ const HeaderWrapper = styled.header`
 
 const HeaderWrapperDesktop = styled.header`
 
+    display: none;
+    
     @media(min-width: 1280px){
         display: flex;
         flex-direction: row;
@@ -39,6 +41,7 @@ const HeaderWrapperDesktop = styled.header`
         justify-content: space-between;
         height: ${({ theme }) => theme.Header.desktopHeight};
         border-bottom: ${({ theme }) => theme.Header.borderBottom} solid #EDF6F9;
+        padding: 0 100px;
     }
     
 `;
@@ -114,8 +117,8 @@ const Header = () => {
                         </HeaderWrapper>
                         <HeaderWrapperDesktop>
                             <LeftSide>
-                               <a href="https://github.com/Bartlomiej95"> <img src={githubIcon} /></a>
-                               <a href="https://www.linkedin.com/in/bart%C5%82omiej-panfil-8a6a8b196/"> <img src={linkedinIcon} /></a>
+                               <a href="https://github.com/Bartlomiej95"> <img src={githubIcon} alt="ikona portalu github"  /></a>
+                               <a href="https://www.linkedin.com/in/bart%C5%82omiej-panfil-8a6a8b196/"> <img src={linkedinIcon} alt="ikona portalu linkedin" /></a>
                             </LeftSide>
                             <Navigation>
                                 <WrapperUl>
