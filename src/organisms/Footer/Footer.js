@@ -58,11 +58,15 @@ const WrapperUl = styled.ul`
 
 const NavLink = styled(Link)`
     display: block;
-    font-size: 25px;
+    font-size: 14px;
     cursor: pointer;
 
     :hover {
         color: #83C5BE;
+    }
+
+    @media(min-width: 1280px){
+        font-size: 25px;
     }
 `;
 

@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import styled, { css } from 'styled-components';
 import BoxImage from '../../molecules/BoxImage/BoxImage';
 import data from '../../data/data.json';
+import leftBtn from '../../assets/leftbtn.svg';
+import rightBtn from '../../assets/rightbtn.svg';
 import { SubHeading } from '../../components/Heading/Heading';
 import { BannerButton } from '../../components/Button/Button';
 
@@ -16,6 +18,47 @@ const Wrapper = styled.section`
         overflow: hidden;
     }
 `;
+
+const DivBtn = styled.div`
+    @media(min-width: 1280px){
+        width: 100%;
+        height: 100px;
+        margin-top: 20px;
+        display: flex;
+        flex-direction: row;
+    }
+    
+`;
+
+const LeftBtn = styled.div`
+     @media(min-width: 1280px){
+        width: 50px;
+        height: 50px;
+        margin-right: 20px;
+        background-image: url(${leftBtn});
+        background-position: center;
+        background-size: 100%;
+        background-repeat: no-repeat;
+        
+        :hover{
+            cursor: pointer;
+        }
+     }
+`
+const RightBtn = styled.div`
+    @media(min-width: 1280px) {
+        height: 50px;
+        width: 50px;
+        background-image: url(${rightBtn});
+        background-position: center;
+        background-size: 100%;
+        background-repeat: no-repeat; 
+
+        :hover{
+            cursor: pointer;
+        }
+    }
+`
 
 const DivBoxImage = styled.div`
     position: relative;
@@ -33,7 +76,8 @@ const DivBoxImage = styled.div`
     };
 
     @media(min-width: 1280px) {
-        transform: translateX(calc(-40vw * ${props => props.activeScreen -1 }));
+        /* transform: translateX(calc(-40vw * ${props => props.activeScreen -1 })); */
+        transform: translateX(${ props => props.actualTransformValue + 'px'});
     }
 `;
 
@@ -78,14 +122,29 @@ const ProjectSection = () => {
     
     
     //zmienna, która wskazuje id screenu projektu, który ma byc wyróżniony
-    const [activeScreen, setActiveScreen] = useState(Math.ceil(data.screens.length/2))
+    const [activeScreen, setActiveScreen] = useState(Math.ceil(data.screens.length/2));
+    const [movingBoxImages, setMovingBoxImages] = useState(0);
+
+    const handleMoveBoxImages = (direction, numberScreens) => {
+        const number = Number(numberScreens);
+
+        if( direction === 'left'){
+            setMovingBoxImages(movingBoxImages => movingBoxImages + 50);
+        } else if( direction === 'right') {
+            setMovingBoxImages(movingBoxImages => movingBoxImages - 50);
+        }
+    }
 
     const screens = data.screens.map(screen => screen);
 
     return(
         <Wrapper id="projects">
             <SubHeading>Moje projekty</SubHeading>
-            <DivBoxImage activeScreen={activeScreen} >   
+            <DivBtn>
+                <LeftBtn onClick={() => handleMoveBoxImages('left', screens)} onMouseDown={() => handleMoveBoxImages('left', screens)}></LeftBtn>
+                <RightBtn onClick={() => handleMoveBoxImages('right', screens)} onMouseDown={() => handleMoveBoxImages('right', screens)}></RightBtn>
+            </DivBtn>
+            <DivBoxImage activeScreen={activeScreen} actualTransformValue={movingBoxImages} >   
                 {
                     screens.map((item) => (
                         <BoxImage 

@@ -19,7 +19,7 @@ const WrapperImage = styled.div`
     }
 
     @media(min-width:1280px) {
-        max-width: 40vw;
+        width: 500px;
         
     }
     
