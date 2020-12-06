@@ -5,7 +5,7 @@ import { FormButton } from '../../components/Button/Button';
 
 const Wrapper = styled.section`
     height: 60vh;
-    margin-top: 100px;
+    margin-top: 150px;
     margin-bottom: 50px;
 
     @media(min-width: 1280px){

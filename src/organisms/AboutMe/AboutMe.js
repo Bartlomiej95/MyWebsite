@@ -28,6 +28,7 @@ const IconBcg = styled.img`
 `;
 
 const WrapperDiv = styled.div`
+    position: relative;
     margin-top: 40px;
     padding-top: 10px;
     display: flex;
@@ -39,6 +40,29 @@ const WrapperDiv = styled.div`
 
     @media(min-width: 1280px) {
         padding: 0 90px;
+    }
+
+    a{
+        display: block;
+        font-size: 16px;
+        color: #006D77;
+        margin-left: 10px;
+        text-decoration: none;
+        padding-left: 20px;
+
+        :hover{
+            text-decoration: underline;
+        }
+
+    }
+
+    @media(min-width: 1280px){
+        a {
+            font-size: 26px;
+            padding-left: 0px;
+            padding-top: 30px;
+
+        }
     }
 `;
 
@@ -85,6 +109,7 @@ const AboutMe = () => {
                     <SubHeading>Cześć !</SubHeading>
                     <ParagraphAboutMe>Mam na imię Bartek i moją pasją jest programowanie. Aktualnie pracuje w spedycji morskiej, 
                         jednak swoją przyszłość wiążę właśnie z branżą IT, a dokładniej front-end developmentem.</ParagraphAboutMe>
+                    <a href="https://www.linkedin.com/in/bart%C5%82omiej-panfil-8a6a8b196/" >Poznaj mnie </a>
                 </LeftSideDiv>
                 <RightSideDiv>
                     <img src={foto} alt="zdjęcie autora"></img>
