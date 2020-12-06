@@ -130,7 +130,10 @@ const Contact = () => {
 
     const { register, handleSubmit, errors } = useForm();
 
-    const onSubmit = data => console.log(data);
+    const onSubmit = (data,e) => {
+        console.log(data);
+        e.target.reset();
+    }
     console.log(errors);
     return(
         <Wrapper id="contact">
