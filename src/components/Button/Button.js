@@ -41,3 +41,20 @@ export const ProjectBoxButton = styled.button`
         background-color: #E29578;
     }
 `;
+
+export const FormButton = styled.button`
+    display: block;
+    width: 100px;
+    height: 30px;
+    border: none;
+    border-radius: 10px;
+    margin: 20px 0;
+    background-color: ${({ theme }) => theme.BannerButton.bcgColor};
+    cursor: pointer;
+    color: white;
+    transition: background-color ease-in-out .3s;
+    
+    :hover{
+        background-color: ${({ theme }) => theme.BannerButton.bcgHoover};
+    }
+`;
