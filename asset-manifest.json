@@ -1,0 +1,28 @@
+{
+  "files": {
+    "main.js": "/MyWebsite/static/js/main.cf97f60e.chunk.js",
+    "main.js.map": "/MyWebsite/static/js/main.cf97f60e.chunk.js.map",
+    "runtime-main.js": "/MyWebsite/static/js/runtime-main.54b83353.js",
+    "runtime-main.js.map": "/MyWebsite/static/js/runtime-main.54b83353.js.map",
+    "static/js/2.20f2c20d.chunk.js": "/MyWebsite/static/js/2.20f2c20d.chunk.js",
+    "static/js/2.20f2c20d.chunk.js.map": "/MyWebsite/static/js/2.20f2c20d.chunk.js.map",
+    "index.html": "/MyWebsite/index.html",
+    "static/js/2.20f2c20d.chunk.js.LICENSE.txt": "/MyWebsite/static/js/2.20f2c20d.chunk.js.LICENSE.txt",
+    "static/media/bartlomiejpanfil.311b7cd0.jpg": "/MyWebsite/static/media/bartlomiejpanfil.311b7cd0.jpg",
+    "static/media/bcgIconBig.2e27418c.svg": "/MyWebsite/static/media/bcgIconBig.2e27418c.svg",
+    "static/media/bcgIconSmall.1fbbd915.svg": "/MyWebsite/static/media/bcgIconSmall.1fbbd915.svg",
+    "static/media/bcgIconThree.f74445c0.svg": "/MyWebsite/static/media/bcgIconThree.f74445c0.svg",
+    "static/media/exit.71d9aea2.svg": "/MyWebsite/static/media/exit.71d9aea2.svg",
+    "static/media/github.82403c03.svg": "/MyWebsite/static/media/github.82403c03.svg",
+    "static/media/leftbtn.96d0ad04.svg": "/MyWebsite/static/media/leftbtn.96d0ad04.svg",
+    "static/media/linkedin.46a37172.svg": "/MyWebsite/static/media/linkedin.46a37172.svg",
+    "static/media/menuIcon.41993432.svg": "/MyWebsite/static/media/menuIcon.41993432.svg",
+    "static/media/rightbtn.551966ea.svg": "/MyWebsite/static/media/rightbtn.551966ea.svg",
+    "static/media/scroll.598d617c.svg": "/MyWebsite/static/media/scroll.598d617c.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.54b83353.js",
+    "static/js/2.20f2c20d.chunk.js",
+    "static/js/main.cf97f60e.chunk.js"
+  ]
+}
