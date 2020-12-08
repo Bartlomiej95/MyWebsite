@@ -7,7 +7,7 @@ export const MenuHeading = styled.h2`
 
 export const MainHeading = styled.h1`
     font-size: ${({ theme }) => theme.MainHeading.mobileFontSize};
-    padding-top: 120px;
+    /* padding-top: 120px; */
     margin-bottom: 30px;
     font-weight: 600;
 

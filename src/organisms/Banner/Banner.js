@@ -1,8 +1,10 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 import bcgIconSmall from '../../assets/bcgIconSmall.svg';
 import bcgIconBig from '../../assets/bcgIconBig.svg';
-import scrollIcon from '../../assets/scroll.svg';
+import scrollIconUp from '../../assets/scrollUp.svg';
+import scrollIconMiddle from '../../assets/scrollMiddle.svg';
+import scrollIconDown from '../../assets/scrollDown.svg';
 import { MainHeading, SubTitle } from '../../components/Heading/Heading';
 import { BannerButton } from '../../components/Button/Button';
 import { Paragraph } from '../../components/Paragraph/Paragraph';
@@ -50,15 +52,38 @@ const BigBcgIcon = styled.img`
     }
 `;
 
-const ScrollIcon = styled.img`
-    display: block;
+const animateScroll = keyframes`
+  0% {
+      transform: translateY(0px);
+  }
+
+  100%{
+      transform: translateY(calc(41px - 15px));
+  }
+`;
+
+const ScrollDiv = styled.div`
     position: absolute;
+    width: 17px;
+    height: 41px;
     bottom: 5%;
     left: 50%;
+    border: 1px solid #006D77;
+    border-radius: 20px;
 
     @media(min-width: 1280px){
         display: none;
     }
+`;
+
+const Scroll = styled.div`
+    background-color: #006d77;
+    width: 95%;
+    height: 15px;
+    margin: 0 auto;
+    border-radius: 50%;
+    transform: translateY(0px);
+    animation: ${animateScroll} 2s infinite linear; 
 `;
 
 const Banner = () => {
@@ -74,7 +99,10 @@ const Banner = () => {
             </ContentWrapper>
             <SmallBcgIcon src={bcgIconSmall} alt="backgroun icon" />
             <BigBcgIcon src={bcgIconBig} alt="backgroun icon" />
-            <ScrollIcon src={scrollIcon} alt="przycisk scrollowania"/>
+            <ScrollDiv>
+                <Scroll />
+            </ScrollDiv>
+
         </BannerWrapper>
     )
 }

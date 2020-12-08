@@ -27,7 +27,7 @@
             "id": 2,
             "name": "css",
             "description": "CSS3, preprocesor SASS",
-            "path": "/assets/tech/css.svg",
+            "path": "tech/css.svg",
             "alt": "napis css"
         },
 
