@@ -5,6 +5,7 @@ import bcgIconBig from '../../assets/bcgIconBig.svg';
 import scrollIcon from '../../assets/scroll.svg';
 import { MainHeading, SubTitle } from '../../components/Heading/Heading';
 import { BannerButton } from '../../components/Button/Button';
+import { Paragraph } from '../../components/Paragraph/Paragraph';
 
 const BannerWrapper = styled.section`
     position: relative;
@@ -15,10 +16,16 @@ const BannerWrapper = styled.section`
     }
 `;
 
+const ContentWrapper = styled.div`
+    width: 90%;
+    margin: 0 auto;
+    text-align: left;
+`;
+
 const SmallBcgIcon = styled.img`
     display: block;
     position: absolute;
-    top: 10%;
+    top: 16%;
     right: 10%;
     z-index: -1;
 
@@ -32,8 +39,8 @@ const SmallBcgIcon = styled.img`
 const BigBcgIcon = styled.img`
     display: block;
     position: absolute;
-    bottom: 0vh;
-    right: 5vw;
+    bottom: 10%;
+    right: -22%;
     transform: translateY(30%);
     z-index: -1;
 
@@ -47,7 +54,7 @@ const ScrollIcon = styled.img`
     display: block;
     position: absolute;
     bottom: 5%;
-    left: 20%;
+    left: 50%;
 
     @media(min-width: 1280px){
         display: none;
@@ -57,10 +64,14 @@ const ScrollIcon = styled.img`
 const Banner = () => {
     return(
         <BannerWrapper id="banner">
-            <MainHeading>Bartłomiej Panfil</MainHeading>
-            <SubTitle>Junior Front-End Developer</SubTitle>
+            <ContentWrapper>
 
-            <BannerButton>Zobacz moje projekty</BannerButton>
+                <MainHeading>Bartłomiej Panfil</MainHeading>
+                <SubTitle>Junior Front-End Developer</SubTitle>
+                <Paragraph>Wykonuje ciężkie prace </Paragraph>
+
+                <BannerButton>Zobacz moje projekty</BannerButton>
+            </ContentWrapper>
             <SmallBcgIcon src={bcgIconSmall} alt="backgroun icon" />
             <BigBcgIcon src={bcgIconBig} alt="backgroun icon" />
             <ScrollIcon src={scrollIcon} alt="przycisk scrollowania"/>

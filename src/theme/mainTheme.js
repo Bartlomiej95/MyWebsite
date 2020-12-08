@@ -19,7 +19,7 @@ export const theme = {
     },
 
     MainHeading: {
-        mobileFontSize: '45px',
+        mobileFontSize: '42px',
         desktopFontSize: '50px',
     }
     

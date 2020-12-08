@@ -1,15 +1,15 @@
 import styled from 'styled-components';
 
 export const MenuHeading = styled.h2`
-    font-size: 30px;
+    font-size: 20px;
     font-weight: 500;
 `;
 
 export const MainHeading = styled.h1`
     font-size: ${({ theme }) => theme.MainHeading.mobileFontSize};
-    text-align: center;
-    padding-top: 180px;
+    padding-top: 120px;
     margin-bottom: 30px;
+    font-weight: 600;
 
     @media(min-width: 1280px) {
         font-size: ${({ theme }) => theme.MainHeading.desktopFontSize};
@@ -21,8 +21,9 @@ export const MainHeading = styled.h1`
 
 export const SubTitle = styled.h2`
     font-size: 21px;
-    text-align: center;
-    margin-bottom: 60px;
+    text-align: left;
+    margin-bottom: 30px;
+    font-weight: 600;
 `;
 
 export const SubHeading = styled.h2`
