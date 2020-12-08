@@ -2,12 +2,9 @@ import React from 'react';
 import styled, { keyframes } from 'styled-components';
 import bcgIconSmall from '../../assets/bcgIconSmall.svg';
 import bcgIconBig from '../../assets/bcgIconBig.svg';
-import scrollIconUp from '../../assets/scrollUp.svg';
-import scrollIconMiddle from '../../assets/scrollMiddle.svg';
-import scrollIconDown from '../../assets/scrollDown.svg';
 import { MainHeading, SubTitle } from '../../components/Heading/Heading';
 import { BannerButton } from '../../components/Button/Button';
-import { Paragraph } from '../../components/Paragraph/Paragraph';
+import { NavBannerParagraph, Paragraph } from '../../components/Paragraph/Paragraph';
 
 const BannerWrapper = styled.section`
     position: relative;
@@ -24,10 +21,17 @@ const ContentWrapper = styled.div`
     text-align: left;
 `;
 
+const DivBannerParagraph = styled.div`
+    display: inline-block;
+    margin-top: 100px;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #009299;
+`;
+
 const SmallBcgIcon = styled.img`
     display: block;
     position: absolute;
-    top: 16%;
+    top: 15%;
     right: 10%;
     z-index: -1;
 
@@ -90,7 +94,9 @@ const Banner = () => {
     return(
         <BannerWrapper id="banner">
             <ContentWrapper>
-
+                <DivBannerParagraph>
+                    <NavBannerParagraph>Strona Główna</NavBannerParagraph>
+                </DivBannerParagraph>
                 <MainHeading>Bartłomiej Panfil</MainHeading>
                 <SubTitle>Junior Front-End Developer</SubTitle>
                 <Paragraph>Wykonuje ciężkie prace </Paragraph>
