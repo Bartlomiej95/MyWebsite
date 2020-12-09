@@ -12,7 +12,7 @@ const Wrapper = styled.div`
     width: 100vw;
     height: 100vh;
     display: none;
-    animation: .3s ${FlyoutMenuAnimation};
+    animation: .6s ${FlyoutMenuAnimation};
 
     @media(min-width: 1280px){
         display: none;
@@ -32,6 +32,7 @@ const Navigation = styled.nav`
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     width: 100%;
     height: 90vh;
     background-color: #EDF6F9;
@@ -59,8 +60,7 @@ const NavLink = styled(Link)`
 
 const WordMenu = styled(MenuHeading)`
     display: block;
-    text-align: center;
-    padding-top: 100px;
+    text-align: left;
 `;
 
 const ExitMenu = styled.div`
@@ -72,6 +72,9 @@ const ExitMenu = styled.div`
     background-color: white;
     cursor: pointer;
 
+    img{
+        margin-right: 5px;
+    }
 
 `;
 
@@ -128,7 +131,7 @@ const FlyoutMenu = ({ visible, exitFlyoutMenu, heightView }) => {
                         spy={true}
                         offset={-heightView}
                         smooth={true}
-                        duration={1250}
+                        duration={1250} 
                         isDynamic={true}
                         onClick={() => exitFlyoutMenu()}
                     >
@@ -138,7 +141,7 @@ const FlyoutMenu = ({ visible, exitFlyoutMenu, heightView }) => {
             </Navigation>
             <ExitMenu onClick={() => exitFlyoutMenu()}>
                 <img src={exitIcon} alt="przycisk exit" />
-                <h2>Menu</h2>
+                <MenuHeading>Menu</MenuHeading>
             </ExitMenu>
         </Wrapper>
     )
