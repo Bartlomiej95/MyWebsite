@@ -8,10 +8,12 @@ import { Paragraph } from '../../components/Paragraph/Paragraph';
 const Wrapper = styled.section`
     position: relative;
     height: 300px;
+    min-height: 300px;
 
     @media(min-width: 1280px){
         padding: 0 100px;
         height: 500px;
+        min-height: 500px;
     }
 `;
 
@@ -48,7 +50,6 @@ const WrapperDiv = styled.div`
         color: #006D77;
         margin-left: 10px;
         text-decoration: none;
-        padding-left: 20px;
 
         :hover{
             text-decoration: underline;

@@ -1,15 +1,17 @@
 import React from 'react';
 import styled from 'styled-components';
-import data from '../../data/data.json';
+import { technology } from '../../data/data.js';
 import bcgIcon from '../../assets/bcgIconBig.svg';
 import Tech from '../../molecules/Tech/Tech';
 import { SubHeading } from '../../components/Heading/Heading';
+import { Paragraph } from '../../components/Paragraph/Paragraph.js';
 
 
 const Wrapper = styled.section`
     position: relative;
     height: 100vh;
     max-width: 100%;
+    min-height: 100vh;
 
     @media(min-width: 1280px) {
         padding: 0 100px;
@@ -45,21 +47,28 @@ const BcgIcon = styled.img`
     }
 `;
 
+const TechParagraph = styled(Paragraph)`
+    width: 80%;
+    margin: 30px auto 50px auto;
+`;
 
 const TechSection = () => {
 
-    const tech = data.technology.map(tech => tech);
+    const tech = technology.map(tech => tech);
 
     return(
         <Wrapper id="tech">
             <SubHeading>Technologie</SubHeading>
+            <TechParagraph>Naukę rozpocząłem od technologii frontendowych: HTML, CSS, JavaScript oraz React. W jednym z moich projektów wykorzystałem również Gatsbyego oraz GraphQL. 
+                Dodatkowo znam także program Adobe Xd. W przyszłości chciałbym poszerzyć swoje kompetencje również o technologie backendowe.
+            </TechParagraph>
             <WrapperTech>
                 {
                     tech.map(tech => (
                         <Tech
                             key={tech.id} 
                             id={tech.id}
-                            path={tech.path} 
+                            icon={tech.icon} 
                             alt={tech.alt} 
                             description={tech.description}
                         />

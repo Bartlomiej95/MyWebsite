@@ -60,10 +60,14 @@ const WrapperButtons = styled.div`
     transform: translateY(-50%);
     display: flex;
     justify-content: space-around;
+
+    a{
+        text-decoration: none;
+    }
 `;
 
 
-const BoxImage = ({ icon, highlighted, id }) => {
+const BoxImage = ({ icon, highlighted, id, live, code}) => {
     
     const [boxMouseOver, setBoxMouseOver] = useState(false) ;
     
@@ -78,8 +82,8 @@ const BoxImage = ({ icon, highlighted, id }) => {
             {
                 boxMouseOver ? (
                     <WrapperButtons onMouseEnter={() => setBoxMouseOver(true)}>
-                        <ProjectBoxButton >KOD</ProjectBoxButton>
-                        <ProjectBoxButton >LIVE</ProjectBoxButton>
+                        <ProjectBoxButton> <a href={code} > KOD </a> </ProjectBoxButton>
+                        <ProjectBoxButton > <a href={live} >LIVE</a> </ProjectBoxButton>
                     </WrapperButtons>
                 ) : (
                     null

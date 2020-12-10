@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import styled, { css } from 'styled-components';
 import BoxImage from '../../molecules/BoxImage/BoxImage';
-import data from '../../data/data.json';
+import { screens as screensProject} from '../../data/data.js';
 import leftBtn from '../../assets/leftbtn.svg';
 import rightBtn from '../../assets/rightbtn.svg';
 import { SubHeading } from '../../components/Heading/Heading';
@@ -12,6 +12,7 @@ const Wrapper = styled.section`
     padding-top: 40px;
     overflow: hidden;
     max-width: 100%;
+    min-height: 100vh;
 
     @media(min-width: 1280px){
         padding: 0 100px;
@@ -110,6 +111,7 @@ const ProjectsButton = styled(BannerButton)`
     width: 140px;
     font-size: 10px;
     transition: background-color ease-in-out .3s;
+    margin: 0 auto;
 
     @media(min-width: 1280px){
         width: 200px;
@@ -122,7 +124,7 @@ const ProjectSection = () => {
     
     
     //zmienna, która wskazuje id screenu projektu, który ma byc wyróżniony
-    const [activeScreen, setActiveScreen] = useState(Math.ceil(data.screens.length/2));
+    const [activeScreen, setActiveScreen] = useState(Math.ceil(screensProject.length/2));
     const [movingBoxImages, setMovingBoxImages] = useState(0);
 
     const handleMoveBoxImages = (direction, numberScreens) => {
@@ -135,7 +137,7 @@ const ProjectSection = () => {
         }
     }
 
-    const screens = data.screens.map(screen => screen);
+    const screens = screensProject.map(screen => screen);
 
     return(
         <Wrapper id="projects">
@@ -149,8 +151,10 @@ const ProjectSection = () => {
                     screens.map((item) => (
                         <BoxImage 
                             key={item.path} 
-                            icon={item.path} 
                             id={item.id} 
+                            icon={item.icon}
+                            live={item.live}
+                            code={item.code} 
                             highlighted={ item.id === activeScreen ? true : false }  
                         />    
                     ))

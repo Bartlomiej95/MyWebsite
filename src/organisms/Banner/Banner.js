@@ -9,6 +9,8 @@ import { NavBannerParagraph, Paragraph } from '../../components/Paragraph/Paragr
 const BannerWrapper = styled.section`
     position: relative;
     height: calc(100vh - 77px);
+    min-height: calc(100vh - 77px);
+    overflow: hidden;
 
     @media(min-width: 1280px){
         padding: 0 142px;
@@ -23,7 +25,7 @@ const ContentWrapper = styled.div`
 
 const DivBannerParagraph = styled.div`
     display: inline-block;
-    margin-top: 100px;
+    margin-top: 50px;
     margin-bottom: 10px;
     border-bottom: 2px solid #009299;
 `;

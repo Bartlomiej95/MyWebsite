@@ -20,7 +20,7 @@ const LeftSide = styled.ul`
     flex-direction: row;
     flex-wrap: nowrap;
     align-items: center;
-    width: 60vw;
+    width: 70vw;
 
     li {
         font-size: 13px;
@@ -58,7 +58,7 @@ const WrapperUl = styled.ul`
 
 const NavLink = styled(Link)`
     display: block;
-    font-size: 14px;
+    font-size: 12px;
     cursor: pointer;
 
     :hover {

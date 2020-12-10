@@ -52,10 +52,9 @@ const DescriptionParagraph = styled(Paragraph)`
 `;
 
 
-const Tech = ({ id, path, alt, description}) => {
+const Tech = ({ id, icon, alt, description}) => {
     
     const [mouseOver, setMouseOver] = useState(false);
-
 
     return(
         <>
@@ -67,7 +66,7 @@ const Tech = ({ id, path, alt, description}) => {
                     
                     ) : (
                     <Wrapper mouseOver={mouseOver} onMouseEnter={() => setMouseOver(true)} >
-                        <img src={path} alt={alt} />   
+                        <img src={icon} alt={alt} />   
                     </Wrapper> )
             }
         </>

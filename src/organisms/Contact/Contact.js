@@ -2,11 +2,13 @@ import styled from 'styled-components';
 import { useForm } from "react-hook-form";
 import { SubHeading } from '../../components/Heading/Heading';
 import { FormButton } from '../../components/Button/Button';
+import { Paragraph } from '../../components/Paragraph/Paragraph';
 
 const Wrapper = styled.section`
     height: 60vh;
     margin-top: 150px;
     margin-bottom: 50px;
+    min-height: 60vh;
 
     @media(min-width: 1280px){
         padding: 0 100px;
@@ -20,27 +22,21 @@ const FormWrapper = styled.div`
 `;
 const Form = styled.form`
     display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    align-items: left;
+    justify-content: space-around;
+    flex-direction: row;
+    flex-wrap: wrap;
     margin: 30px auto 0 auto;
-    padding-left: 15%;
-    background-color: #EDF6F9;
     width: 90%;
-    border-radius: 10px;
-    box-shadow: 2px 2px 0 rgb(183, 188, 188, 0.8);
-
-    label{
-        margin-top: 20px;
-    }
 
     input {
         display: block;
-        border-radius: 10px;
-        border: none;
-        box-shadow: 2px 2px 0 rgb(183, 188, 188, 0.6);
-        padding-left: 10px;
-        color: black;
+        border: 1px solid #83C5BE;
+        width: 40%;
+        padding: 3px 0 3px 5px;
+        
+        :-ms-input-placeholder{
+            color: #83C5BE;
+        }
 
         :focus{
             outline: none;
@@ -49,12 +45,12 @@ const Form = styled.form`
     }
 
     textarea{
-        width: 60%;
+        width: 90%;
         height: 100px;
-        border: none;
-        border-radius: 20px;
-        box-shadow: 2px 2px 0 rgb(183, 188, 188, 0.6);
-        padding: 10px 0 0 10px;
+        max-height: 100px;
+        border: 1px solid #83C5BE;
+        padding: 5px 0 0 5px;
+        margin-top: 10px;
 
         :focus{
             outline: none;
@@ -83,12 +79,6 @@ const Form = styled.form`
 
 `;
 
-const nameErrors = {
-    required: true,
-    minLength: 2,
-    maxLength: 15,
-}
-
 const titleErrors = {
     required: true,
     minLength: 2,
@@ -98,19 +88,6 @@ const titleErrors = {
 const emailError = {
     pattern: /^[a-z\d]+[\w\d.-]*@(?:[a-z\d]+[a-z\d-]+\.){1,5}[a-z]{2,6}$/i
 }
-
-const nameErrorsFn = type => {
-    switch(type){
-        case'required':
-            return <span>Imię jest wymagane</span>
-        case 'minLength':
-            return <span>Imię musi zawierać co najmniej 2 znaki</span>
-        case 'maxLength':
-            return <span>Imię musi zawierać co najwyżej 15 znaków</span>
-        default:
-            return null;
-    }
-} 
 
 const titleErrorsFn = type => {
     switch(type){
@@ -125,6 +102,12 @@ const titleErrorsFn = type => {
     }
 } 
 
+const ParagraphContact = styled(Paragraph)`
+    display: block;
+    margin: 30px auto 50px auto;
+    width: 90%;
+    
+`;
 
 const Contact = () => {
 
@@ -137,24 +120,20 @@ const Contact = () => {
     console.log(errors);
     return(
         <Wrapper id="contact">
-            <SubHeading>Kontakt</SubHeading>
+            <SubHeading>Napisz do mnie !</SubHeading>
+            <ParagraphContact> Chcesz dowiedzieć się o mnie czegoś więcej ? A może jesteś zainteresowany współpracą lub chcesz zaprosić mnie na rozmowę kwalifikacyjną ?
+                Zapraszam do kontaktu !
+            </ParagraphContact>
             <FormWrapper>
                 <Form onSubmit={handleSubmit(onSubmit)}>
-                    <label> 
-                        <input type="text" placeholder="Imię" name="name" ref={register(nameErrors)} />
-                        {nameErrorsFn(errors.name?.type)}
-                    </label>
-                    <label>
-                        <input type="text" placeholder="Email" name="email" ref={register(emailError)}/>
-                        {errors.email && <span>Podaj poprawny adres email</span>}
-                    </label>
-                    <label>
-                        <input type="text" placeholder="Temat" name="title" ref={register(titleErrors)}/>
+                        <input type="text" placeholder="Temat wiadomości" name="title" ref={register(titleErrors)}/>
                         {titleErrorsFn(errors.title?.type)}
-                    </label>
-                    <label>
-                        <textarea type="textarea" placeholder="Treść..." name="content"ref={register()} />
-                    </label>
+
+                        <input type="text" placeholder="Adres email" name="email" ref={register(emailError)}/>
+                        {errors.email && <span>Podaj poprawny adres email</span>}
+
+                        <textarea type="textarea" placeholder="Treść wiadomości" name="content"ref={register()} />
+                   
                     <FormButton>Wyślij</FormButton>
                 </Form>
             </FormWrapper>
