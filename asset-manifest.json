@@ -1,27 +1,31 @@
 {
   "files": {
-    "main.js": "/MyWebsite/static/js/main.41fd19c7.chunk.js",
-    "main.js.map": "/MyWebsite/static/js/main.41fd19c7.chunk.js.map",
+    "main.js": "/MyWebsite/static/js/main.807ec943.chunk.js",
+    "main.js.map": "/MyWebsite/static/js/main.807ec943.chunk.js.map",
     "runtime-main.js": "/MyWebsite/static/js/runtime-main.54b83353.js",
     "runtime-main.js.map": "/MyWebsite/static/js/runtime-main.54b83353.js.map",
-    "static/js/2.20f2c20d.chunk.js": "/MyWebsite/static/js/2.20f2c20d.chunk.js",
-    "static/js/2.20f2c20d.chunk.js.map": "/MyWebsite/static/js/2.20f2c20d.chunk.js.map",
+    "static/js/2.5e8c2ff5.chunk.js": "/MyWebsite/static/js/2.5e8c2ff5.chunk.js",
+    "static/js/2.5e8c2ff5.chunk.js.map": "/MyWebsite/static/js/2.5e8c2ff5.chunk.js.map",
     "index.html": "/MyWebsite/index.html",
-    "static/js/2.20f2c20d.chunk.js.LICENSE.txt": "/MyWebsite/static/js/2.20f2c20d.chunk.js.LICENSE.txt",
+    "static/js/2.5e8c2ff5.chunk.js.LICENSE.txt": "/MyWebsite/static/js/2.5e8c2ff5.chunk.js.LICENSE.txt",
     "static/media/bartlomiejpanfil.311b7cd0.jpg": "/MyWebsite/static/media/bartlomiejpanfil.311b7cd0.jpg",
     "static/media/bcgIconBig.2e27418c.svg": "/MyWebsite/static/media/bcgIconBig.2e27418c.svg",
     "static/media/bcgIconSmall.1fbbd915.svg": "/MyWebsite/static/media/bcgIconSmall.1fbbd915.svg",
     "static/media/bcgIconThree.f74445c0.svg": "/MyWebsite/static/media/bcgIconThree.f74445c0.svg",
+    "static/media/css.svg": "/MyWebsite/static/media/css.a5c3d5d3.svg",
     "static/media/exit.71d9aea2.svg": "/MyWebsite/static/media/exit.71d9aea2.svg",
     "static/media/github.82403c03.svg": "/MyWebsite/static/media/github.82403c03.svg",
+    "static/media/html.svg": "/MyWebsite/static/media/html.c5087605.svg",
+    "static/media/js.svg": "/MyWebsite/static/media/js.5c7ba399.svg",
     "static/media/leftbtn.96d0ad04.svg": "/MyWebsite/static/media/leftbtn.96d0ad04.svg",
     "static/media/linkedin.46a37172.svg": "/MyWebsite/static/media/linkedin.46a37172.svg",
     "static/media/menuIcon.41993432.svg": "/MyWebsite/static/media/menuIcon.41993432.svg",
+    "static/media/react.svg": "/MyWebsite/static/media/react.5da67a20.svg",
     "static/media/rightbtn.551966ea.svg": "/MyWebsite/static/media/rightbtn.551966ea.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.54b83353.js",
-    "static/js/2.20f2c20d.chunk.js",
-    "static/js/main.41fd19c7.chunk.js"
+    "static/js/2.5e8c2ff5.chunk.js",
+    "static/js/main.807ec943.chunk.js"
   ]
 }
