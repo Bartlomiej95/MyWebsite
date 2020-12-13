@@ -12,6 +12,7 @@ const Wrapper = styled.section`
     height: 100vh;
     max-width: 100%;
     min-height: 100vh;
+    overflow: hidden;
 
     @media(min-width: 1280px) {
         padding: 0 100px;
@@ -37,7 +38,7 @@ const BcgIcon = styled.img`
     display: block;
     position: absolute;
     top: -5vh;
-    left: 55vw;
+    left: 60vw;
     transform: scale(0.2);
 
     @media(min-width: 1280px) {
@@ -50,6 +51,7 @@ const BcgIcon = styled.img`
 const TechParagraph = styled(Paragraph)`
     width: 80%;
     margin: 30px auto 50px auto;
+
 `;
 
 const TechSection = () => {

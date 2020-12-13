@@ -12,6 +12,9 @@ const Wrapper = styled.section`
     flex-direction: row;
     justify-content: space-around;
 
+    @media(max-width: 325px) {
+        margin-top: 50px;
+    }
 
 `;
 

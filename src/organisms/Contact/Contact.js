@@ -59,24 +59,37 @@ const Form = styled.form`
 
     @media(min-width: 1280px){
         
-        width: 100%;
+        width: 90%;
         flex-wrap: wrap;
+        justify-content: space-between;
         padding-top: 20px;
-        padding-left: 20%;
 
         input {
             font-size: 20px;
             padding: 10px 0 10px 10px;
-            border-radius: 20px;
             margin-bottom: 10px;
         }
 
         textarea{
             font-size: 20px;
-            height: 200px;
+            height: 350px;
+            max-height: 350px;
+            width: 100%;
         }
     }
 
+`;
+    
+const ParagraphContact = styled(Paragraph)`
+    display: block;
+    margin: 30px auto 50px auto;
+    width: 90%;
+        
+`;
+    
+const DivFormButton = styled.div`
+    width: 50%;
+    margin: 20px auto 0 auto;
 `;
 
 const titleErrors = {
@@ -102,13 +115,6 @@ const titleErrorsFn = type => {
     }
 } 
 
-const ParagraphContact = styled(Paragraph)`
-    display: block;
-    margin: 30px auto 50px auto;
-    width: 90%;
-    
-`;
-
 const Contact = () => {
 
     const { register, handleSubmit, errors } = useForm();
@@ -133,8 +139,10 @@ const Contact = () => {
                         {errors.email && <span>Podaj poprawny adres email</span>}
 
                         <textarea type="textarea" placeholder="Treść wiadomości" name="content"ref={register()} />
-                   
-                    <FormButton>Wyślij</FormButton>
+
+                    <DivFormButton>
+                        <FormButton>Wyślij</FormButton>
+                    </DivFormButton>
                 </Form>
             </FormWrapper>
 

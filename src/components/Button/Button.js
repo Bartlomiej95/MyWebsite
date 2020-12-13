@@ -48,7 +48,7 @@ export const FormButton = styled.button`
     height: 30px;
     border: none;
     border-radius: 10px;
-    margin: 20px 0;
+    margin: 20px auto 0 auto;
     background-color: ${({ theme }) => theme.BannerButton.bcgColor};
     cursor: pointer;
     color: white;
@@ -56,5 +56,12 @@ export const FormButton = styled.button`
     
     :hover{
         background-color: ${({ theme }) => theme.BannerButton.bcgHoover};
+    }
+
+    @media(min-width: 1280px){
+        width: 150px;
+        height: 40px;
+        margin: 0 auto;
+        font-size: 20px
     }
 `;

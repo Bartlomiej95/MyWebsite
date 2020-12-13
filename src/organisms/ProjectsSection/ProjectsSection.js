@@ -72,8 +72,16 @@ const DivBoxImage = styled.div`
     transform: translateX(calc(-80vw * ${props => props.activeScreen -1 }));
     transition: transform .3s ease-in-out;
 
-    @media(min-width: 500px) and (max-width: 1279px){
+    
+
+    @media(min-width: 500px) and (max-width: 650px){
         transform: translateX(calc(-400px * ${props => props.activeScreen - 1}));
+        padding-left: 50px;
+    };
+
+    @media(min-width: 651px) and (max-width: 1279px){
+        transform: translateX(calc(-400px * ${props => props.activeScreen - 1}));
+        padding-left: 100px;
     };
 
     @media(min-width: 1280px) {
@@ -105,6 +113,10 @@ const NavForProject = styled.div`
     :hover{
         cursor: pointer;
     }
+
+    @media(min-width: 1280px){
+        display: none;
+    }
 `;
 
 const ProjectsButton = styled(BannerButton)`
@@ -124,7 +136,7 @@ const ProjectSection = () => {
     
     
     //zmienna, która wskazuje id screenu projektu, który ma byc wyróżniony
-    const [activeScreen, setActiveScreen] = useState(Math.ceil(screensProject.length/2));
+    const [activeScreen, setActiveScreen] = useState(1);
     const [movingBoxImages, setMovingBoxImages] = useState(0);
 
     const handleMoveBoxImages = (direction, numberScreens) => {

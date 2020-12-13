@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled, { keyframes } from 'styled-components';
 import bcgIconSmall from '../../assets/bcgIconSmall.svg';
 import bcgIconBig from '../../assets/bcgIconBig.svg';
@@ -38,8 +38,8 @@ const SmallBcgIcon = styled.img`
     z-index: -1;
 
     @media(min-width: 1280px){
-        top: 10%;
-        right: 15%;
+        top: 12%;
+        right: 40%;
         transform: scale(1.5);
     }
 `;
@@ -89,12 +89,15 @@ const Scroll = styled.div`
     margin: 0 auto;
     border-radius: 50%;
     transform: translateY(0px);
-    animation: ${animateScroll} 2s infinite linear; 
+    animation: ${animateScroll} 3s infinite linear; 
 `;
 
 const Banner = () => {
+
+    const [wheelStatus, setWheelStatus] = useState(false);
+
     return(
-        <BannerWrapper id="banner">
+        <BannerWrapper id="banner" onWheel={()=> setWheelStatus(true)} onTouchEnd={() => setWheelStatus(true)}>
             <ContentWrapper>
                 <DivBannerParagraph>
                     <NavBannerParagraph>Strona Główna</NavBannerParagraph>
@@ -107,9 +110,14 @@ const Banner = () => {
             </ContentWrapper>
             <SmallBcgIcon src={bcgIconSmall} alt="backgroun icon" />
             <BigBcgIcon src={bcgIconBig} alt="backgroun icon" />
-            <ScrollDiv>
-                <Scroll />
-            </ScrollDiv>
+            {
+                !wheelStatus && (
+                    <ScrollDiv>
+                        <Scroll />
+                    </ScrollDiv>
+                )
+            }
+            
 
         </BannerWrapper>
     )
