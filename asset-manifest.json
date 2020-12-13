@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.js": "/MyWebsite/static/js/main.7382ba18.chunk.js",
-    "main.js.map": "/MyWebsite/static/js/main.7382ba18.chunk.js.map",
+    "main.js": "/MyWebsite/static/js/main.beee380d.chunk.js",
+    "main.js.map": "/MyWebsite/static/js/main.beee380d.chunk.js.map",
     "runtime-main.js": "/MyWebsite/static/js/runtime-main.54b83353.js",
     "runtime-main.js.map": "/MyWebsite/static/js/runtime-main.54b83353.js.map",
-    "static/js/2.b5519db9.chunk.js": "/MyWebsite/static/js/2.b5519db9.chunk.js",
-    "static/js/2.b5519db9.chunk.js.map": "/MyWebsite/static/js/2.b5519db9.chunk.js.map",
+    "static/js/2.97bb0487.chunk.js": "/MyWebsite/static/js/2.97bb0487.chunk.js",
+    "static/js/2.97bb0487.chunk.js.map": "/MyWebsite/static/js/2.97bb0487.chunk.js.map",
     "index.html": "/MyWebsite/index.html",
-    "static/js/2.b5519db9.chunk.js.LICENSE.txt": "/MyWebsite/static/js/2.b5519db9.chunk.js.LICENSE.txt",
+    "static/js/2.97bb0487.chunk.js.LICENSE.txt": "/MyWebsite/static/js/2.97bb0487.chunk.js.LICENSE.txt",
     "static/media/bartlomiejpanfil.311b7cd0.jpg": "/MyWebsite/static/media/bartlomiejpanfil.311b7cd0.jpg",
     "static/media/bcgIconBig.2e27418c.svg": "/MyWebsite/static/media/bcgIconBig.2e27418c.svg",
     "static/media/bcgIconSmall.1fbbd915.svg": "/MyWebsite/static/media/bcgIconSmall.1fbbd915.svg",
@@ -28,7 +28,7 @@
   },
   "entrypoints": [
     "static/js/runtime-main.54b83353.js",
-    "static/js/2.b5519db9.chunk.js",
-    "static/js/main.7382ba18.chunk.js"
+    "static/js/2.97bb0487.chunk.js",
+    "static/js/main.beee380d.chunk.js"
   ]
 }
