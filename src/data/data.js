@@ -54,7 +54,7 @@ export const technology = [
     {
         id: 3,
         name: "javascript",
-        description: "ECMAScript6, funkcje strzałkowe",
+        description: "ECMAScript 6 m.in. funkcje strzałkowe, destrukturyzacja, programowanie obiektowe oraz funkcyjne, klasy",
         icon: javascriptIcon,
         alt: "napis javascript"
     },
@@ -62,7 +62,7 @@ export const technology = [
     {
         id: 4,
         name: "react",
-        description: "React jest fajny",
+        description: "Styled-components, React-router, Higher-Order Components, Redux, Hooks, Prop-Types",
         icon: reactIcon,
         alt: "napis react"
     }

@@ -9,7 +9,6 @@ import { Paragraph } from '../../components/Paragraph/Paragraph.js';
 
 const Wrapper = styled.section`
     position: relative;
-    height: 100vh;
     max-width: 100%;
     min-height: 100vh;
     overflow: hidden;

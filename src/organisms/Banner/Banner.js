@@ -104,7 +104,9 @@ const Banner = () => {
                 </DivBannerParagraph>
                 <MainHeading>Bartłomiej Panfil</MainHeading>
                 <SubTitle>Junior Front-End Developer</SubTitle>
-                <Paragraph>Wykonuje ciężkie prace </Paragraph>
+                <Paragraph>Cześć, mam na imię Bartek i pasjonuje się programowaniem, z czym wiążę swoją przyszłość. Zapraszam do przejrzenia mojej strony, na której właśnie się znajdujesz. 
+                    Zaprezentuje Ci na niej swoje projekty oraz dowiesz się jakie technologie potrafię i jakich się uczę.
+                </Paragraph>
 
                 <BannerButton>Zobacz moje projekty</BannerButton>
             </ContentWrapper>
