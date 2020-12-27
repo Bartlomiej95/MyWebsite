@@ -42,7 +42,7 @@ const BcgIcon = styled.img`
 
     @media(min-width: 1280px) {
         transform: scale(1);
-        top: 60%;
+        top: 0%;
         left: 60%;
     }
 `;

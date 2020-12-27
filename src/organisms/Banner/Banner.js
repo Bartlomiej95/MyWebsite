@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import styled, { keyframes } from 'styled-components';
+import { Link } from 'react-scroll';
 import bcgIconSmall from '../../assets/bcgIconSmall.svg';
 import bcgIconBig from '../../assets/bcgIconBig.svg';
 import { MainHeading, SubTitle } from '../../components/Heading/Heading';
@@ -108,7 +109,18 @@ const Banner = () => {
                     Zaprezentuje Ci na niej swoje projekty oraz dowiesz się jakie technologie potrafię i jakich się uczę.
                 </Paragraph>
 
-                <BannerButton>Zobacz moje projekty</BannerButton>
+                <Link 
+                    activeClass="active"
+                    to="projects"
+                    spy={true}
+                    smooth={true}
+                    duration={500}
+                    isDynamic={true}
+                >
+                    <BannerButton>
+                        Zobacz moje projekty
+                    </BannerButton>
+                </Link>
             </ContentWrapper>
             <SmallBcgIcon src={bcgIconSmall} alt="backgroun icon" />
             <BigBcgIcon src={bcgIconBig} alt="backgroun icon" />

@@ -184,7 +184,9 @@ const ProjectSection = () => {
                     ))
                 }
             </WrapperNavForProject>
-            <ProjectsButton>Zobacz wszystkie projekty</ProjectsButton>
+            <a href="https://github.com/Bartlomiej95">
+                <ProjectsButton>Zobacz wszystkie projekty</ProjectsButton>
+            </a>
 
             
         </Wrapper>
