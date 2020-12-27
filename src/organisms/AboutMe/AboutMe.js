@@ -7,9 +7,9 @@ import { Paragraph } from '../../components/Paragraph/Paragraph';
 
 const Wrapper = styled.section`
     position: relative;
-    height: 300px;
-    min-height: 300px;
-    margin-top: 100px;
+    height: ${({ theme }) => theme.AboutMe.Wrapper.mobileHeight};
+    min-height: ${({ theme }) => theme.AboutMe.Wrapper.mobileMinHeight};
+    margin-top: ${({ theme }) => theme.AboutMe.Wrapper.mobileMarginTop};
     
     @media(max-height:640px) and (max-width: 400px){
         margin-top: 150px;

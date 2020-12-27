@@ -9,25 +9,25 @@ import { Paragraph } from '../../components/Paragraph/Paragraph.js';
 
 const Wrapper = styled.section`
     position: relative;
-    max-width: 100%;
-    min-height: 100vh;
+    max-width: ${({ theme }) => theme.TechSection.Wrapper.mobileMaxWidth};
+    min-height: ${({ theme }) => theme.TechSection.Wrapper.mobileMinWidth};
     overflow: hidden;
 
     @media(min-width: 1280px) {
-        padding: 0 100px;
+        padding: 0 ${({ theme }) => theme.TechSection.Wrapper.desktopPaddingLevels};
     }
 `;
 
 const WrapperTech = styled.div`
-    width: 100%;
+    width: ${({ theme }) => theme.TechSection.WrapperTech.mobileWidth};
 
     @media(min-width: 1280px){
         display: flex;
         flex-wrap: wrap;
         justify-content: space-around;
-        width: 80vw;
+        width: ${({ theme }) => theme.TechSection.WrapperTech.dekstopWidth};
         margin: 0 auto;
-        padding-top: 50px;
+        padding-top: ${({ theme }) => theme.TechSection.WrapperTech.desktopPaddingTop};
 
     }
 

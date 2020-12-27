@@ -5,14 +5,14 @@ import { FormButton } from '../../components/Button/Button';
 import { Paragraph } from '../../components/Paragraph/Paragraph';
 
 const Wrapper = styled.section`
-    height: 60vh;
-    margin-top: 150px;
-    margin-bottom: 50px;
-    min-height: 60vh;
+    height: ${({ theme }) => theme.Contact.Wrapper.mobileHeight};
+    margin-top: ${({ theme }) => theme.Contact.Wrapper.mobileMarginTop};
+    margin-bottom: ${({ theme }) => theme.Contact.Wrapper.mobileMarginBottom};
+    min-height: ${({ theme }) => theme.Contact.Wrapper.mobileMinHeight};
 
     @media(min-width: 1280px){
-        padding: 0 100px;
-        height: 100vh;
+        padding: 0 ${({ theme }) => theme.Contact.Wrapper.desktopPaddingLevels};
+        height: ${({ theme }) => theme.Contact.Wrapper.desktopHeight};
     }
 `;
 

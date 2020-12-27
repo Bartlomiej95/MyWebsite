@@ -5,7 +5,7 @@ import linkedinIcon from '../../assets/linkedin.svg';
 
 const Wrapper = styled.section`
     /* width: 100vw; */
-    height: 100px;
+    height: ${({ theme }) => theme.Footer.Wrapper.mobileHeight};
     background-color: #006D77;
 
     display: flex;
@@ -13,7 +13,7 @@ const Wrapper = styled.section`
     justify-content: space-around;
 
     @media(max-width: 325px) {
-        margin-top: 50px;
+        margin-top: ${({ theme }) => theme.Footer.Wrapper.smallMobileMarginTop};
     }
 
 `;

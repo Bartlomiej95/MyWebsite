@@ -4,11 +4,11 @@ export const BannerButton = styled.button`
     display: block;
     width: ${({ theme }) => theme.BannerButton.mobileWidth};
     height: ${({ theme }) => theme.BannerButton.mobileHeight};
-    margin-top: 40px;
+    margin-top: ${({ theme }) => theme.BannerButton.marginTop};;
     background-color: ${({ theme }) => theme.BannerButton.bcgColor};
     color: white;
     border: none;
-    border-radius: 20px;
+    border-radius: ${({ theme }) => theme.BannerButton.mobileBorderRadius};
     cursor: pointer;
     transition: background-color ease-in-out .3s;
     
@@ -21,14 +21,14 @@ export const BannerButton = styled.button`
     @media(min-width: 1280px){
         width: ${({ theme }) => theme.BannerButton.desktopWidth};
         height: ${({ theme }) => theme.BannerButton.desktopHeight};
-        border-radius: 40px;
+        border-radius: ${({ theme }) => theme.BannerButton.desktopBorderRadius};
     }
 `;
 
 export const ProjectBoxButton = styled.button`
     display: block;
-    width: 50px;
-    height: 30px;
+    width: ${({ theme }) => theme.ProjectBoxButton.width};
+    height: ${({ theme }) => theme.ProjectBoxButton.height};
     margin: 0 auto;
     border: none;
     background-color: #FFDDD2;
@@ -44,10 +44,10 @@ export const ProjectBoxButton = styled.button`
 
 export const FormButton = styled.button`
     display: block;
-    width: 100px;
-    height: 30px;
+    width: ${({ theme }) => theme.FormButton.mobileWidth};
+    height: ${({ theme }) => theme.FormButton.mobileHeight};
     border: none;
-    border-radius: 10px;
+    border-radius: ${({ theme }) => theme.FormButton.borderRadius};
     margin: 20px auto 0 auto;
     background-color: ${({ theme }) => theme.BannerButton.bcgColor};
     cursor: pointer;
@@ -59,9 +59,9 @@ export const FormButton = styled.button`
     }
 
     @media(min-width: 1280px){
-        width: 150px;
-        height: 40px;
+        width: ${({ theme }) => theme.FormButton.desktopWidth};
+        height: ${({ theme }) => theme.FormButton.desktopHeight};
         margin: 0 auto;
-        font-size: 20px
+        font-size: ${({ theme }) => theme.FormButton.desktopFontSize};
     }
 `;

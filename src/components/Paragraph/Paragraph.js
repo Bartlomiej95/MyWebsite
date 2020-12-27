@@ -1,15 +1,15 @@
 import styled from 'styled-components';
 
 export const Paragraph = styled.p`
-    font-size: 12px;
+    font-size: ${({ theme }) => theme.Paragraph.mobileFontSize};
 
     @media(min-width: 1280px){
-        font-size: 24px;
+        font-size: ${({ theme }) => theme.Paragraph.desktopFontSize};
     }
 `;
 
 export const NavBannerParagraph = styled.p`
     text-transform: uppercase;
-    font-size: 14px;
+    font-size: ${({ theme }) => theme.NavBannerParagraph.fontSize};
     
 `;

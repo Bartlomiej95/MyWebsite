@@ -8,14 +8,14 @@ import { SubHeading } from '../../components/Heading/Heading';
 import { BannerButton } from '../../components/Button/Button';
 
 const Wrapper = styled.section`
-    height: 100vh;
-    padding-top: 40px;
+    height: ${({ theme }) => theme.ProjectSection.Wrapper.mobileHeight};
+    padding-top: ${({ theme }) => theme.ProjectSection.Wrapper.mobilePaddingTop};
     overflow: hidden;
-    max-width: 100%;
-    min-height: 100vh;
+    max-width: ${({ theme }) => theme.ProjectSection.Wrapper.mobileMaxWidth};
+    min-height: ${({ theme }) => theme.ProjectSection.Wrapper.mobileMinHeight};
 
     @media(min-width: 1280px){
-        padding: 0 100px;
+        padding: 0 ${({ theme }) => theme.ProjectSection.Wrapper.desktopLeftPadding};
         overflow: hidden;
     }
 `;
@@ -95,15 +95,15 @@ const WrapperNavForProject = styled.div`
     flex-direction: row;
     flex-wrap: nowrap;
     justify-content: center;
-    margin: 30px auto;
+    margin: ${({ theme }) => theme.ProjectSection.NavForProject.wrapperMobileMarginTop} auto;
 `;
 
 const NavForProject = styled.div`
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
+    width: ${({ theme }) => theme.ProjectSection.NavForProject.mobileWidth };
+    height: ${({ theme }) => theme.ProjectSection.NavForProject.mobileHeight };
+    border-radius: ${({ theme }) => theme.ProjectSection.NavForProject.mobileBorderRadius };
     border: 2px solid black;
-    margin-left: 5px;
+    margin-left: ${({ theme }) => theme.ProjectSection.NavForProject.mobileMarginLeft };
 
     ${({ highlighted }) => highlighted 
     && css`
@@ -120,14 +120,14 @@ const NavForProject = styled.div`
 `;
 
 const ProjectsButton = styled(BannerButton)`
-    width: 140px;
-    font-size: 10px;
+    width: ${({ theme }) => theme.ProjectsButton.mobileWidth };
+    font-size: ${({ theme }) => theme.ProjectsButton.mobileFontSize };
     transition: background-color ease-in-out .3s;
     margin: 0 auto;
 
     @media(min-width: 1280px){
-        width: 200px;
-        font-size: 14px;
+        width: ${({ theme }) => theme.ProjectsButton.desktopWidth };
+        font-size: ${({ theme }) => theme.ProjectsButton.desktopFontSize };
     }
 `;
 

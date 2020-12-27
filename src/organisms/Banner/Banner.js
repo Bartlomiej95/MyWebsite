@@ -25,8 +25,8 @@ const ContentWrapper = styled.div`
 
 const DivBannerParagraph = styled.div`
     display: inline-block;
-    margin-top: 50px;
-    margin-bottom: 10px;
+    margin-top: ${({ theme }) => theme.DivBannerParagraph.marginTop};
+    margin-bottom:  ${({ theme }) => theme.DivBannerParagraph.marginBottom};
     border-bottom: 2px solid #009299;
 `;
 
@@ -70,12 +70,12 @@ const animateScroll = keyframes`
 
 const ScrollDiv = styled.div`
     position: absolute;
-    width: 17px;
-    height: 41px;
+    width: ${({ theme }) => theme.ScrollDiv.width};
+    height: ${({ theme }) => theme.ScrollDiv.height};
     bottom: 5%;
     left: 50%;
     border: 1px solid #006D77;
-    border-radius: 20px;
+    border-radius: ${({ theme }) => theme.ScrollDiv.borderRadius};
 
     @media(min-width: 1280px){
         display: none;
@@ -84,10 +84,10 @@ const ScrollDiv = styled.div`
 
 const Scroll = styled.div`
     background-color: #006d77;
-    width: 95%;
-    height: 15px;
+    width: ${({ theme }) => theme.Scroll.width};
+    height: ${({ theme }) => theme.Scroll.height};
     margin: 0 auto;
-    border-radius: 50%;
+    border-radius: ${({ theme }) => theme.Scroll.borderRadius};
     transform: translateY(0px);
     animation: ${animateScroll} 3s infinite linear; 
 `;
