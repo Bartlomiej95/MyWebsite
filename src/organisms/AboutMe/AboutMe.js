@@ -20,9 +20,11 @@ const Wrapper = styled.section`
     }
 
     @media(min-width: 1280px){
-        padding: 0 100px;
         height: 500px;
         min-height: 500px;
+        width: 1180px;
+        margin-left: auto;
+        margin-right: auto;
     }
 `;
 

@@ -41,7 +41,9 @@ const HeaderWrapperDesktop = styled.header`
         justify-content: space-between;
         height: ${({ theme }) => theme.Header.desktopHeight};
         border-bottom: ${({ theme }) => theme.Header.borderBottom} solid #EDF6F9;
-        padding: 0 100px;
+        /* padding: 0 100px; */
+        width: 1220px;
+        margin: 0 auto;
     }
     
 `;

@@ -14,7 +14,9 @@ const Wrapper = styled.section`
     overflow: hidden;
 
     @media(min-width: 1280px) {
-        padding: 0 ${({ theme }) => theme.TechSection.Wrapper.desktopPaddingLevels};
+        /* padding: 0 ${({ theme }) => theme.TechSection.Wrapper.desktopPaddingLevels}; */
+        width: 1180px;
+        margin: 0 auto;
     }
 `;
 
@@ -48,7 +50,7 @@ const BcgIcon = styled.img`
 `;
 
 const TechParagraph = styled(Paragraph)`
-    width: 80%;
+
     margin: 30px auto 50px auto;
 
 `;

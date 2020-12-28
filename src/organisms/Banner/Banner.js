@@ -14,7 +14,9 @@ const BannerWrapper = styled.section`
     overflow: hidden;
 
     @media(min-width: 1280px){
-        padding: 0 142px;
+        /* padding: 0 142px; */
+        width: 1180px;
+        margin: 0 auto;
     }
 `;
 
@@ -22,6 +24,10 @@ const ContentWrapper = styled.div`
     width: 90%;
     margin: 0 auto;
     text-align: left;
+
+    @media(min-width: 1280px){
+        width: 100%;
+    }
 `;
 
 const DivBannerParagraph = styled.div`

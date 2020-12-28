@@ -18,12 +18,23 @@ const Wrapper = styled.section`
 
 `;
 
+const Content = styled.div`
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+    @media(min-width: 1280px){
+        width: 1180px;
+        margin: 0 auto;
+    }
+`;
+
 const LeftSide = styled.ul`
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
     align-items: center;
-    width: 70vw;
+    width: 75vw;
 
     li {
         font-size: 13px;
@@ -44,7 +55,7 @@ const RightSide = styled.div`
     display: flex;
     align-items: center;
     justify-content:space-around;
-    width: 15vw;    
+    width: 20vw;    
 `;
 
 const WrapperUl = styled.ul`
@@ -77,57 +88,60 @@ const NavLink = styled(Link)`
 const Footer = () => {
     return(
         <Wrapper>
-            <LeftSide>
-                <WrapperUl>
-                    <NavLink 
-                        activeClass="active"
-                        to="projects"
-                        spy={true}
-                        smooth={true}
-                        duration={500}
-                        isDynamic={true}
-                    >
-                        Projekty
-                    </NavLink>
-                    <NavLink 
-                        activeClass="active"
-                        to="tech"
-                        spy={true}
-                        smooth={true}
-                        duration={750}
-                        isDynamic={true}
-                    >
-                        Technologie
-                    </NavLink>
-                    <NavLink 
-                        activeClass="active"
-                        to="about"
-                        spy={true}
-                        smooth={true}
-                        duration={1000}
-                        isDynamic={true}
-                    >
-                        O mnie
-                    </NavLink>
-                    <NavLink 
-                        activeClass="active"
-                        to="contact"
-                        spy={true}
-                        smooth={true}
-                        duration={1250}
-                        isDynamic={true}
-                    >
-                        Kontakt
-                    </NavLink>
-                </WrapperUl>               
+            <Content>
+
+                <LeftSide>
+                    <WrapperUl>
+                        <NavLink 
+                            activeClass="active"
+                            to="projects"
+                            spy={true}
+                            smooth={true}
+                            duration={500}
+                            isDynamic={true}
+                        >
+                            Projekty
+                        </NavLink>
+                        <NavLink 
+                            activeClass="active"
+                            to="tech"
+                            spy={true}
+                            smooth={true}
+                            duration={750}
+                            isDynamic={true}
+                        >
+                            Technologie
+                        </NavLink>
+                        <NavLink 
+                            activeClass="active"
+                            to="about"
+                            spy={true}
+                            smooth={true}
+                            duration={1000}
+                            isDynamic={true}
+                        >
+                            O mnie
+                        </NavLink>
+                        <NavLink 
+                            activeClass="active"
+                            to="contact"
+                            spy={true}
+                            smooth={true}
+                            duration={1250}
+                            isDynamic={true}
+                        >
+                            Kontakt
+                        </NavLink>
+                    </WrapperUl>               
+                                    
                                 
-                            
-                
-            </LeftSide>
-            <RightSide>
-                <a href="https://github.com/Bartlomiej95"><img src={linkedinIcon} alt="ikona portalu linkedin" /></a>
-                <a href="https://www.linkedin.com/in/bart%C5%82omiej-panfil-8a6a8b196/"><img src={githubIcon} alt="ikona portalu github" /></a>
-            </RightSide>
+                    
+                </LeftSide>
+                <RightSide>
+                    <a href="https://github.com/Bartlomiej95"><img src={linkedinIcon} alt="ikona portalu linkedin" /></a>
+                    <a href="https://www.linkedin.com/in/bart%C5%82omiej-panfil-8a6a8b196/"><img src={githubIcon} alt="ikona portalu github" /></a>
+                </RightSide>
+            </Content>
         </Wrapper>
     )
 }

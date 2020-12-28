@@ -11,8 +11,11 @@ const Wrapper = styled.section`
     min-height: ${({ theme }) => theme.Contact.Wrapper.mobileMinHeight};
 
     @media(min-width: 1280px){
-        padding: 0 ${({ theme }) => theme.Contact.Wrapper.desktopPaddingLevels};
+        /* padding: 0 ${({ theme }) => theme.Contact.Wrapper.desktopPaddingLevels}; */
         height: ${({ theme }) => theme.Contact.Wrapper.desktopHeight};
+        width: 1180px;
+        margin-left: auto;
+        margin-right: auto;
     }
 `;
 
@@ -59,7 +62,7 @@ const Form = styled.form`
 
     @media(min-width: 1280px){
         
-        width: 90%;
+        width: 100%;
         flex-wrap: wrap;
         justify-content: space-between;
         padding-top: 20px;
@@ -83,7 +86,6 @@ const Form = styled.form`
 const ParagraphContact = styled(Paragraph)`
     display: block;
     margin: 30px auto 50px auto;
-    width: 90%;
         
 `;
     

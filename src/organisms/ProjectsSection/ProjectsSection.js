@@ -17,6 +17,8 @@ const Wrapper = styled.section`
     @media(min-width: 1280px){
         padding: 0 ${({ theme }) => theme.ProjectSection.Wrapper.desktopLeftPadding};
         overflow: hidden;
+        width: 1180px;
+        margin: 0 auto;
     }
 `;
 
