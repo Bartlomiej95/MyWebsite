@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { useForm } from "react-hook-form";
+import emailjs from 'emailjs-com';
 import { SubHeading } from '../../components/Heading/Heading';
 import { FormButton } from '../../components/Button/Button';
 import { Paragraph } from '../../components/Paragraph/Paragraph';
@@ -121,11 +122,21 @@ const Contact = () => {
 
     const { register, handleSubmit, errors } = useForm();
 
-    const onSubmit = (data,e) => {
-        console.log(data);
-        e.target.reset();
-    }
     console.log(errors);
+
+
+    const sendEmail = (data,e) => {
+        e.preventDefault();
+    
+        emailjs.sendForm(process.env.REACT_APP_EMAILJS_SERVICE_ID, process.env.REACT_APP_EMAILJS_TEMPLATE_ID, e.target, process.env.REACT_APP_EMAILJS_USER_ID)
+          .then((result) => {
+              console.log(result.text);
+              e.target.reset();
+          }, (error) => {
+              console.log(error.text);
+          });
+      }
+
     return(
         <Wrapper id="contact">
             <SubHeading>Napisz do mnie !</SubHeading>
@@ -133,7 +144,7 @@ const Contact = () => {
                 Zapraszam do kontaktu !
             </ParagraphContact>
             <FormWrapper>
-                <Form onSubmit={handleSubmit(onSubmit)}>
+                <Form onSubmit={handleSubmit(sendEmail)}>
                         <input type="text" placeholder="Temat wiadomości" name="title" ref={register(titleErrors)}/>
                         {titleErrorsFn(errors.title?.type)}
 
