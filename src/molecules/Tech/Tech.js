@@ -12,6 +12,10 @@ const Wrapper = styled.div`
     margin: 30px auto;
     border-radius: 10px;
     border: 1px solid #006D77;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
     @media(min-width: 1280px){
         width: 300px;
@@ -44,8 +48,6 @@ const Wrapper = styled.div`
 
 const DescriptionParagraph = styled(Paragraph)`
     display: block;
-    width: 100%;
-    height: 100%;
     color: white;
     padding: 5px 10px;
     font-size: 14px;

@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import foto from '../../assets/bartlomiejpanfil.jpg';
 import bcgIconThree from '../../assets/bcgIconThree.svg';
 import { SubHeading } from '../../components/Heading/Heading';
-import { Paragraph } from '../../components/Paragraph/Paragraph';
+import { ParagraphAboutMe } from '../../components/Paragraph/Paragraph';
 
 const Wrapper = styled.section`
     position: relative;
@@ -80,7 +80,6 @@ const WrapperDiv = styled.div`
 
 const LeftSideDiv = styled.div`
     width: 45vw;
-    padding-top: 20px;
 
     @media(min-width: 1280px){
         padding-top: 80px;
@@ -103,13 +102,8 @@ const RightSideDiv = styled.div`
     }
 `;
 
-const ParagraphAboutMe = styled(Paragraph)`
-    margin: 30px 10px 30px 10px;
-
-    @media(min-width: 1280px) {
-        font-size: 20px;
-        margin-top: 40px;
-    }
+const ParagraphAbout = styled(ParagraphAboutMe)`
+    margin: 20px 0px 30px 10px;
 
     @media(max-width: 325px) {
         font-size: 10px;
@@ -123,8 +117,8 @@ const AboutMe = () => {
             <WrapperDiv>
                 <LeftSideDiv>
                     <SubHeading>Cześć !</SubHeading>
-                    <ParagraphAboutMe>Mam na imię Bartek i moją pasją jest programowanie. Aktualnie pracuje w spedycji morskiej, 
-                        jednak swoją przyszłość wiążę właśnie z branżą IT, a dokładniej front-end developmentem.</ParagraphAboutMe>
+                    <ParagraphAbout>Mam na imię Bartek i moją pasją jest programowanie. Aktualnie pracuje w spedycji morskiej, 
+                        jednak swoją przyszłość wiążę właśnie z branżą IT, a dokładniej front-end developmentem.</ParagraphAbout>
                     <a href="https://www.linkedin.com/in/bart%C5%82omiej-panfil-8a6a8b196/" >Poznaj mnie </a>
                 </LeftSideDiv>
                 <RightSideDiv>

@@ -23,7 +23,7 @@ export const theme = {
         mobileHeight: '30px',
         desktopWidth: '150px',
         desktopHeight: '40px',
-        borderRadius: '10px',
+        borderRadius: '20px',
         desktopFontSize: '20px',        
 
     },
@@ -66,13 +66,25 @@ export const theme = {
 
     // Paragraph - start
     Paragraph: {
-        mobileFontSize: '12px',
+        mobileFontSize: '14px',
         desktopFontSize: '20px',
+        desktopWidth: '75%',
+        mobileLineHeight: '24px',
+        desktopLineHeight: '32px',
     },
     
     NavBannerParagraph: {
         fontSize: '14px',
     },
+
+    ParagraphAboutMe: {
+        mobileLineHeight: '18px',
+        desktopLineHeight: '30px',
+        mobileFontSize: '12px',
+        desktopFontSize: '20px',
+        desktopMarginTop: '40px',
+    },
+
     // Paragraph - end
     
 
@@ -114,7 +126,7 @@ export const theme = {
             mobileHeight: '100vh',
             mobilePaddingTop: '40px',
             mobileMaxWidth: '100%',
-            mobileMinHeight: '100vh',
+            mobileMinHeight: '600px',
             desktopLeftPadding: '100px'
         },
     
@@ -133,7 +145,7 @@ export const theme = {
     // TechSection - start
     TechSection: {
         Wrapper: {
-            mobileMaxWidth: '100%',
+            mobileMaxWidth: '90%',
             mobileMinHeight: '100vh',
             desktopPaddingLevels: '100px'
         },
@@ -179,7 +191,7 @@ export const theme = {
             mobileHeight: '60vh',
             mobileMarginTop: '150px',
             mobileMarginBottom: '50px',
-            mobileMinHeight: '60vh',
+            mobileMinHeight: '500px',
             desktopPaddingLevels: '100px',
             desktopHeight: '100vh'
         }

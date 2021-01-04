@@ -12,11 +12,11 @@ const Wrapper = styled.section`
     max-width: ${({ theme }) => theme.TechSection.Wrapper.mobileMaxWidth};
     min-height: ${({ theme }) => theme.TechSection.Wrapper.mobileMinWidth};
     overflow: hidden;
+    margin: 0 auto;
 
     @media(min-width: 1280px) {
         /* padding: 0 ${({ theme }) => theme.TechSection.Wrapper.desktopPaddingLevels}; */
         width: 1180px;
-        margin: 0 auto;
     }
 `;
 
@@ -52,6 +52,12 @@ const BcgIcon = styled.img`
 const TechParagraph = styled(Paragraph)`
 
     margin: 30px auto 50px auto;
+    text-align: center;
+    line-height: ${({ theme }) => theme.Paragraph.mobileLineHeight};
+
+    @media(min-width: 1280px){
+        line-height: ${({ theme }) => theme.Paragraph.desktopLineHeight};
+    }
 
 `;
 

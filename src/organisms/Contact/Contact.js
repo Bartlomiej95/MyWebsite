@@ -70,7 +70,7 @@ const Form = styled.form`
 
         input {
             font-size: 20px;
-            padding: 10px 0 10px 10px;
+            padding: 15px 10px;
             margin-bottom: 10px;
         }
 
@@ -87,6 +87,15 @@ const Form = styled.form`
 const ParagraphContact = styled(Paragraph)`
     display: block;
     margin: 30px auto 50px auto;
+    width: 90%;
+    line-height: ${({ theme }) => theme.Paragraph.mobileLineHeight};
+    text-align: center;
+
+    @media(min-width: 1280px){
+        width: %;
+        line-height: ${({ theme }) => theme.Paragraph.desktopLineHeight};
+
+    }
         
 `;
     
@@ -140,8 +149,8 @@ const Contact = () => {
     return(
         <Wrapper id="contact">
             <SubHeading>Napisz do mnie !</SubHeading>
-            <ParagraphContact> Chcesz dowiedzieć się o mnie czegoś więcej ? A może jesteś zainteresowany współpracą lub chcesz zaprosić mnie na rozmowę kwalifikacyjną ?
-                Zapraszam do kontaktu !
+            <ParagraphContact> Chcesz dowiedzieć się o mnie czegoś więcej? A może jesteś zainteresowany współpracą lub chcesz zaprosić mnie na rozmowę kwalifikacyjną?
+                Zapraszam do kontaktu!
             </ParagraphContact>
             <FormWrapper>
                 <Form onSubmit={handleSubmit(sendEmail)}>

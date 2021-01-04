@@ -13,12 +13,17 @@ const Wrapper = styled.section`
     overflow: hidden;
     max-width: ${({ theme }) => theme.ProjectSection.Wrapper.mobileMaxWidth};
     min-height: ${({ theme }) => theme.ProjectSection.Wrapper.mobileMinHeight};
+    margin: 0 auto;
+    background-color: transparent;
+
+    a {
+        text-decoration: none;
+    }
 
     @media(min-width: 1280px){
         padding: 0 ${({ theme }) => theme.ProjectSection.Wrapper.desktopLeftPadding};
         overflow: hidden;
         width: 1180px;
-        margin: 0 auto;
     }
 `;
 

@@ -50,6 +50,7 @@ const NavLink = styled(Link)`
     font-size: 20px;
     list-style: none;
     padding-bottom: 15px;
+    text-align: center;
 
     :hover{
         color:#006D77;

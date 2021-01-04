@@ -54,13 +54,13 @@ const SmallBcgIcon = styled.img`
 const BigBcgIcon = styled.img`
     display: block;
     position: absolute;
-    bottom: 10%;
-    right: -22%;
+    bottom: 18%;
+    right: -15%;
     transform: translateY(30%);
     z-index: -1;
 
     @media(min-width: 1280px){
-        bottom: 10%;
+        bottom: 18%;
         right: 20%;
     }
 `;
