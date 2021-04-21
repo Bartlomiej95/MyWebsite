@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.js": "/MyWebsite/static/js/main.89b9d474.chunk.js",
-    "main.js.map": "/MyWebsite/static/js/main.89b9d474.chunk.js.map",
+    "main.js": "/MyWebsite/static/js/main.5e0ac5de.chunk.js",
+    "main.js.map": "/MyWebsite/static/js/main.5e0ac5de.chunk.js.map",
     "runtime-main.js": "/MyWebsite/static/js/runtime-main.54b83353.js",
     "runtime-main.js.map": "/MyWebsite/static/js/runtime-main.54b83353.js.map",
-    "static/js/2.b87d8711.chunk.js": "/MyWebsite/static/js/2.b87d8711.chunk.js",
-    "static/js/2.b87d8711.chunk.js.map": "/MyWebsite/static/js/2.b87d8711.chunk.js.map",
+    "static/js/2.6fe144fd.chunk.js": "/MyWebsite/static/js/2.6fe144fd.chunk.js",
+    "static/js/2.6fe144fd.chunk.js.map": "/MyWebsite/static/js/2.6fe144fd.chunk.js.map",
     "index.html": "/MyWebsite/index.html",
-    "static/js/2.b87d8711.chunk.js.LICENSE.txt": "/MyWebsite/static/js/2.b87d8711.chunk.js.LICENSE.txt",
+    "static/js/2.6fe144fd.chunk.js.LICENSE.txt": "/MyWebsite/static/js/2.6fe144fd.chunk.js.LICENSE.txt",
     "static/media/bartlomiejpanfil.311b7cd0.jpg": "/MyWebsite/static/media/bartlomiejpanfil.311b7cd0.jpg",
     "static/media/bcgIconBig.2e27418c.svg": "/MyWebsite/static/media/bcgIconBig.2e27418c.svg",
     "static/media/bcgIconSmall.1fbbd915.svg": "/MyWebsite/static/media/bcgIconSmall.1fbbd915.svg",
@@ -22,13 +22,14 @@
     "static/media/linkedin.46a37172.svg": "/MyWebsite/static/media/linkedin.46a37172.svg",
     "static/media/menuIcon.41993432.svg": "/MyWebsite/static/media/menuIcon.41993432.svg",
     "static/media/minesweeper.PNG": "/MyWebsite/static/media/minesweeper.9c457c70.PNG",
+    "static/media/planner.PNG": "/MyWebsite/static/media/planner.c832290e.PNG",
     "static/media/react.5da67a20.svg": "/MyWebsite/static/media/react.5da67a20.svg",
     "static/media/rightbtn.551966ea.svg": "/MyWebsite/static/media/rightbtn.551966ea.svg",
     "static/media/zdrowiena100.PNG": "/MyWebsite/static/media/zdrowiena100.a861cf32.PNG"
   },
   "entrypoints": [
     "static/js/runtime-main.54b83353.js",
-    "static/js/2.b87d8711.chunk.js",
-    "static/js/main.89b9d474.chunk.js"
+    "static/js/2.6fe144fd.chunk.js",
+    "static/js/main.5e0ac5de.chunk.js"
   ]
 }
