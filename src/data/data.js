@@ -1,11 +1,11 @@
 import homepantryIcon from "../assets/screens/homepantry.PNG";
 import minesweeperIcon from "../assets/screens/minesweeper.PNG";
 import zdrowieIcon from "../assets/screens/zdrowiena100.PNG";
+import plannerIcon from "../assets/screens/planner.PNG";
 import htmlIcon from "../assets/tech/html.svg";
 import cssIcon from "../assets/tech/css.svg";
 import javascriptIcon from "../assets/tech/js.svg";
 import reactIcon from "../assets/tech/react.svg";
-
 
 
 export const screens = [
@@ -31,6 +31,13 @@ export const screens = [
             live: 'https://bartlomiej95.github.io/Minesweeper/',
             code: 'https://github.com/Bartlomiej95/Minesweeper'
         },
+        {
+            id: 4,
+            icon: plannerIcon,
+            path: require("../assets/screens/planner.PNG"),
+            live: 'https://planer-app.netlify.app/',
+            code: 'https://github.com/Bartlomiej95/Planner',
+        }
     
 ];
 
