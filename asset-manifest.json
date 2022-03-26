@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.js": "/MyWebsite/static/js/main.5e0ac5de.chunk.js",
-    "main.js.map": "/MyWebsite/static/js/main.5e0ac5de.chunk.js.map",
+    "main.js": "/MyWebsite/static/js/main.7784eed3.chunk.js",
+    "main.js.map": "/MyWebsite/static/js/main.7784eed3.chunk.js.map",
     "runtime-main.js": "/MyWebsite/static/js/runtime-main.54b83353.js",
     "runtime-main.js.map": "/MyWebsite/static/js/runtime-main.54b83353.js.map",
     "static/js/2.6fe144fd.chunk.js": "/MyWebsite/static/js/2.6fe144fd.chunk.js",
@@ -14,6 +14,7 @@
     "static/media/bcgIconThree.f74445c0.svg": "/MyWebsite/static/media/bcgIconThree.f74445c0.svg",
     "static/media/css.a5c3d5d3.svg": "/MyWebsite/static/media/css.a5c3d5d3.svg",
     "static/media/exit.71d9aea2.svg": "/MyWebsite/static/media/exit.71d9aea2.svg",
+    "static/media/express.c1c2eb27.svg": "/MyWebsite/static/media/express.c1c2eb27.svg",
     "static/media/github.82403c03.svg": "/MyWebsite/static/media/github.82403c03.svg",
     "static/media/homepantry.PNG": "/MyWebsite/static/media/homepantry.b2d449c1.PNG",
     "static/media/html.c5087605.svg": "/MyWebsite/static/media/html.c5087605.svg",
@@ -22,6 +23,7 @@
     "static/media/linkedin.46a37172.svg": "/MyWebsite/static/media/linkedin.46a37172.svg",
     "static/media/menuIcon.41993432.svg": "/MyWebsite/static/media/menuIcon.41993432.svg",
     "static/media/minesweeper.PNG": "/MyWebsite/static/media/minesweeper.9c457c70.PNG",
+    "static/media/node.78ce570d.svg": "/MyWebsite/static/media/node.78ce570d.svg",
     "static/media/planner.PNG": "/MyWebsite/static/media/planner.c832290e.PNG",
     "static/media/react.5da67a20.svg": "/MyWebsite/static/media/react.5da67a20.svg",
     "static/media/rightbtn.551966ea.svg": "/MyWebsite/static/media/rightbtn.551966ea.svg",
@@ -30,6 +32,6 @@
   "entrypoints": [
     "static/js/runtime-main.54b83353.js",
     "static/js/2.6fe144fd.chunk.js",
-    "static/js/main.5e0ac5de.chunk.js"
+    "static/js/main.7784eed3.chunk.js"
   ]
 }
