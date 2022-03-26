@@ -6,7 +6,8 @@ import htmlIcon from "../assets/tech/html.svg";
 import cssIcon from "../assets/tech/css.svg";
 import javascriptIcon from "../assets/tech/js.svg";
 import reactIcon from "../assets/tech/react.svg";
-
+import nodeIcon from "../assets/tech/node.svg";
+import expressIcon from "../assets/tech/express.svg";
 
 export const screens = [
     
@@ -72,5 +73,19 @@ export const technology = [
         description: "Styled-components, React-router, Higher-Order Components, Redux, Hooks, Prop-Types",
         icon: reactIcon,
         alt: "napis react"
+    },
+    {
+        id: 5,
+        name: "node.js",
+        description: "Http, Promisy, struktura Buffer, Stream",
+        icon: nodeIcon,
+        alt: "napis node.js"
+    },
+    {
+        id: 6,
+        name: "express.js",
+        description: "Handlebars, CRUD",
+        icon: expressIcon,
+        alt: "napis express.js",
     }
 ]
