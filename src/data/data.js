@@ -10,36 +10,34 @@ import nodeIcon from "../assets/tech/node.svg";
 import expressIcon from "../assets/tech/express.svg";
 
 export const screens = [
-    
         {
             id: 1,
+            icon: plannerIcon,
+            path: require("../assets/screens/planner.PNG"),
+            live: 'https://planer-app.netlify.app/',
+            code: 'https://github.com/Bartlomiej95/Planner',
+        },
+        {
+            id: 2,
             icon: homepantryIcon,
             path: require("../assets/screens/homepantry.PNG"),
             live: 'https://bartlomiej95.github.io/HomePantry/',
             code: 'https://github.com/Bartlomiej95/HomePantry'
         },
         {
-            id: 2,
+            id: 3,
             icon: zdrowieIcon,
             path: require("../assets/screens/zdrowiena100.PNG"),
             live: 'https://hungry-jones-1c9e3d.netlify.app/',
             code: 'https://github.com/Bartlomiej95/ZdowieNa100'
         },
         {
-            id: 3,
+            id: 4,
             icon: minesweeperIcon,
             path: require("../assets/screens/minesweeper.PNG"),
             live: 'https://bartlomiej95.github.io/Minesweeper/',
             code: 'https://github.com/Bartlomiej95/Minesweeper'
         },
-        {
-            id: 4,
-            icon: plannerIcon,
-            path: require("../assets/screens/planner.PNG"),
-            live: 'https://planer-app.netlify.app/',
-            code: 'https://github.com/Bartlomiej95/Planner',
-        }
-    
 ];
 
 export const technology = [

@@ -5,22 +5,25 @@ import { ProjectBoxButton } from '../../components/Button/Button';
 const WrapperImage = styled.div`
     position: relative;
     min-width: 273px;
-    width: 80vw;
+    width: 80%;
     height: 300px;
     background-color: #E29578;
     border-radius: 2px;
-    margin: 0 12px;
+    margin: 10px auto;
     box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.16);
     transition: filter .2s ease-in-out;
     overflow: hidden;
 
     @media(min-width: 500px) and (max-width: 1279px){
         width: 400px;
+        height: 350px;
+        margin: 30px auto;
     }
 
     @media(min-width:1280px) {
         width: 500px;
-        
+        height: 400px;
+        margin: 30px auto;
     }
     
     @media(max-width: 1279px) {
@@ -29,7 +32,6 @@ const WrapperImage = styled.div`
             height: 320px;
             box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.6);
             transform: translateY(-10px);
-                
         `};
 
         ${({highlighted, boxMouseOver}) => highlighted && boxMouseOver
