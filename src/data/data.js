@@ -8,6 +8,7 @@ import javascriptIcon from "../assets/tech/js.svg";
 import reactIcon from "../assets/tech/react.svg";
 import nodeIcon from "../assets/tech/node.svg";
 import expressIcon from "../assets/tech/express.svg";
+import nestIcon from "../assets/tech/nest.svg";
 
 export const screens = [
         {
@@ -85,5 +86,12 @@ export const technology = [
         description: "Handlebars, CRUD",
         icon: expressIcon,
         alt: "napis express.js",
+    },
+    {
+        id: 7,
+        name: "nest.js",
+        description: "Providery, service-y, pipe-y, guard-y, TypeORM",
+        icon: nestIcon,
+        alt: "napis Nest.js",
     }
 ]
