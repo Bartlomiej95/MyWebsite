@@ -132,14 +132,11 @@ const Footer = () => {
                         >
                             Kontakt
                         </NavLink>
-                    </WrapperUl>               
-                                    
-                                
-                    
+                    </WrapperUl>
                 </LeftSide>
                 <RightSide>
-                    <a href="https://github.com/Bartlomiej95"><img src={linkedinIcon} alt="ikona portalu linkedin" /></a>
-                    <a href="https://www.linkedin.com/in/bart%C5%82omiej-panfil-8a6a8b196/"><img src={githubIcon} alt="ikona portalu github" /></a>
+                    <a href="https://www.linkedin.com/in/bart%C5%82omiej-panfil-8a6a8b196/"><img src={linkedinIcon} alt="ikona portalu linkedin" /></a>
+                    <a href="https://github.com/Bartlomiej95"><img src={githubIcon} alt="ikona portalu github" /></a>
                 </RightSide>
             </Content>
         </Wrapper>
